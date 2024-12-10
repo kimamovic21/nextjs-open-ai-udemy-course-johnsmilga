@@ -38,3 +38,5 @@ Section 01: Next.js Tutorial
 
 11. Nested Routes
 -u folderu about kreiramo folder info i komponentu page.js
+
+Quiz 1: Fundamentals Quiz
