@@ -23,3 +23,8 @@ Section 01: Next.js Tutorial
 
 08. Home Page
 -u app/page.js komponenti kreiramo i eksportujemo kao default funkciju HomePage()
+
+09. More Pages
+-u folderu app kreiramo folder about i komponentu page.js
+-u about/page.js komponenti kreiramo i eksportujemo kao default funkciju AboutPage()
+-otvorimo rutu http://localhost:3000/about
