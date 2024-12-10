@@ -60,3 +60,20 @@ Quiz 1: Fundamentals Quiz
 16. Layout File
 -u komponenti layout.js, promjenjen opis projekta u varijabli const metadata
 -u jsx-u kreiran nav element 
+
+17. Navbar Challenge
+-kreiramo folder components i komponentu Navbar.jsx
+-u komponentu Navbar.jsx importujemo komponentu Link
+-kreiramo varijablu niz links
+-kreiramo i eksportujemo funkciju Navbar() kao default
+-u jsx-u kreiramo nav element sa Tailwind CSS klasama
+-u nav elementu kreiramo div element sa Tailwind CSS klasama
+-u div element dodajemo komponentu Link sa prop href i className
+-kreiramo ul element sa Tailwind CSS klasama
+-u ul element dodajemo metodu links?.map()
+-u funkciji map(), u return izjavi kreiramo li element
+-u li element dodajemo komponentu Link sa prop href i className
+-u komponentu layout.js importujemo komponentu Navbar.jsx
+-u jsx-u, u body element dodajemo komponentu Navbar
+-kreiramo main element sa Tailwind CSS klasama
+-u main elementu dinamicki prikazujemo prop children
