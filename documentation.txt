@@ -4,3 +4,5 @@ Udemy NextJS & Open AI Course John Smilga
 Section 01: Next.js Tutorial
 
 01. Course Resources
+
+02. Discord Channel
