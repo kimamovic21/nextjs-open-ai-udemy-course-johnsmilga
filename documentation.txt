@@ -99,3 +99,12 @@ Quiz 1: Fundamentals Quiz
 -vrijednost metode await fetch(url) pohranjujemo u varijablu const response
 -dodajemo metodu await response.json()
 -vrijednost metode await response.json() pohranjujemo u varijablu const data
+
+21. Loading Component
+-u komponenti drinks/page.js kreiramo funkciju fetchDrinks()
+-u funkciju fetchDrinks() dodajemo metodu await new Promise() i varijable const response i const data
+-dodajemo izjavu return data
+-u funkciju DrinksPage() dodajemo funkciju await fetchDrinks()
+-vrijednost funkcije await fetchDrinks() pohranjujemo u varijablu const drinks
+-kreiramo loading.js fajl
+-u loading.js fajlu kreiramo i eksportujemo funkciju loading() kao default
