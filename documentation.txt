@@ -120,3 +120,8 @@ Quiz 1: Fundamentals Quiz
 -funkciji DrinksLayout() dodajemo parametar destruktuirani prop children
 -u jsx-u kreiramo HTML elemente sa Tailwind CSS klasama
 -u roditelj div element dinamicki prikazujemo vrijednost prop children
+
+24. Dynamic Routes
+-u folderu drinks kreiramo folder [id] i komponentu page.js
+-u [id]/page.js fajlu kreiramo i eksportujemo funkciju SingleDrinkPage() kao default
+-funkciji SingleDrinkPage() dodajemo parametar destruktuirani prop params
