@@ -40,3 +40,7 @@ Section 01: Next.js Tutorial
 -u folderu about kreiramo folder info i komponentu page.js
 
 Quiz 1: Fundamentals Quiz
+
+12. First Challenge
+-u folderu app kreiramo folder client, drinks, prisma-example, query i tasks
+-u svakom folderu kreiramo komponente page.js
