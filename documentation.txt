@@ -17,3 +17,6 @@ Section 01: Next.js Tutorial
 
 06. Create New Next.js App
 -u terminalu ukucamo komandu npx create-next-app@14 nextjs-tutorial
+
+07. Files and Folder Structure
+-u nextjs-tutorial/README.md fajl dodan opis izrade projekta
