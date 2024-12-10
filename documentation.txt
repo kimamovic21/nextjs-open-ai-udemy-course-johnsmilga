@@ -52,3 +52,5 @@ Quiz 1: Fundamentals Quiz
 -otvorimo link: https://www.npmjs.com/package/@tailwindcss/typography
 -u terminalu instaliramo pakete Daisy UI i Tailwind CSS Typography
 -u terminalu ukucamo komande: npm i -D daisyui@3.9.4 i npm i @tailwindcss/typography
+
+14. TailwindCSS
