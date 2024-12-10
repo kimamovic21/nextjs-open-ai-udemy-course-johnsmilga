@@ -54,3 +54,5 @@ Quiz 1: Fundamentals Quiz
 -u terminalu ukucamo komande: npm i -D daisyui@3.9.4 i npm i @tailwindcss/typography
 
 14. TailwindCSS
+
+15. DaisyUI
