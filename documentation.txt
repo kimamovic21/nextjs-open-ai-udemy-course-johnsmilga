@@ -81,3 +81,13 @@ Quiz 1: Fundamentals Quiz
 18. Server Component vs Client Component
 -otvorimo link: https://nextjs.org/docs/app/building-your-application/rendering/server-components
 -otvorimo link: https://nextjs.org/docs/app/building-your-application/rendering/client-components
+
+19. Counter Challange
+-u komponenti app/page.js, HTML elementima dodajemo Tailwind CSS klase
+-u komponentu client/page.js importujemo funkciju useState iz paketa React
+-kreiramo state varijablu const count i set funkciju setCount
+-u jsx-u kreiramo button element sa Daisy UI klasama
+-button elementu dodajemo dogadaj onClick
+-u dogadaj onClick dodajemo anonimnu funkciju
+-u anonimnu funkciju proslijedujemo funkciju setCount()
+-dodajemo direktivu 'use client'
