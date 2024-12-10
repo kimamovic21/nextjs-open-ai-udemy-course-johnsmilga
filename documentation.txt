@@ -6,3 +6,6 @@ Section 01: Next.js Tutorial
 01. Course Resources
 
 02. Discord Channel
+
+03. Introduction to Next.js
+-otvorimo web stranicu: https://nextjs.org/
