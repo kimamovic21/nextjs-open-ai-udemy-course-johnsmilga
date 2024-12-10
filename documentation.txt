@@ -137,3 +137,15 @@ Quiz 1: Fundamentals Quiz
 -importujemo komponentu Link
 -u li element dodajemo komponentu Link sa prop href
 -u prop href dodajemo dinamicki link
+
+26. Single Drink - Challenge
+-u komponenti [id]/page.js kreiramo varijablu const url
+-importujemo komponentu Link
+-kreiramo asinhronu funkciju getSingleDrink() sa parametrom id
+-u funkciji getSingleDrink() kreiramo varijablu const res
+-dodajemo uslov if (!res.ok)
+-u uslov if dodajemo funkciju throw new Error()
+-funkciji SingleDrinkPage() dodajemo asinhronost
+-u funkciji SingleDrinkPage() kreiramo varijablu const data
+-kreiramo varijable const title i const imgSrc
+-u jsx-u, u roditelj div element dodajemo komponentu Link sa prop href i className
