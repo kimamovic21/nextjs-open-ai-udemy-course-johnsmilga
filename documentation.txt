@@ -77,3 +77,7 @@ Quiz 1: Fundamentals Quiz
 -u jsx-u, u body element dodajemo komponentu Navbar
 -kreiramo main element sa Tailwind CSS klasama
 -u main elementu dinamicki prikazujemo prop children
+
+18. Server Component vs Client Component
+-otvorimo link: https://nextjs.org/docs/app/building-your-application/rendering/server-components
+-otvorimo link: https://nextjs.org/docs/app/building-your-application/rendering/client-components
