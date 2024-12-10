@@ -108,3 +108,7 @@ Quiz 1: Fundamentals Quiz
 -vrijednost funkcije await fetchDrinks() pohranjujemo u varijablu const drinks
 -kreiramo loading.js fajl
 -u loading.js fajlu kreiramo i eksportujemo funkciju loading() kao default
+
+22. Error Component
+-u folderu drinks kreiramo error.js fajl
+-u error.js fajlu kreiramo i eksportujemo funkciju error() kao default
