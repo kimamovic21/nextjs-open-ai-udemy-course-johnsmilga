@@ -112,3 +112,11 @@ Quiz 1: Fundamentals Quiz
 22. Error Component
 -u folderu drinks kreiramo error.js fajl
 -u error.js fajlu kreiramo i eksportujemo funkciju error() kao default
+-u komponenti drinks/page.js, u funkciju fetchDrinks() dodajemo uslov if (!response.ok)
+
+23. Nested Layouts
+-u folderu drinks kreiramo layout.js fajl
+-u layout.js fajlu kreiramo i eksportujemo funkciju DrinksLayout()
+-funkciji DrinksLayout() dodajemo parametar destruktuirani prop children
+-u jsx-u kreiramo HTML elemente sa Tailwind CSS klasama
+-u roditelj div element dinamicki prikazujemo vrijednost prop children
