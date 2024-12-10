@@ -9,6 +9,9 @@ const AboutPage = () => {
       <Link href='/' className='text-2xl'>
         home page
       </Link>
+      <Link href='/about/info' className='text-2xl ml-2'>
+        about info
+      </Link>
     </div>
   );
 };

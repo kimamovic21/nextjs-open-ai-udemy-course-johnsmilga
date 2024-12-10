@@ -35,3 +35,6 @@ Section 01: Next.js Tutorial
 -u roditelj div element dodajemo komponentu Link sa otvorenim i zatvorenim tagom
 -komponenti Link dodajemo prop href i className
 -ponovimo isti postupak u komponenti about/page.js
+
+11. Nested Routes
+-u folderu about kreiramo folder info i komponentu page.js
