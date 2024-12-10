@@ -28,3 +28,10 @@ Section 01: Next.js Tutorial
 -u folderu app kreiramo folder about i komponentu page.js
 -u about/page.js komponenti kreiramo i eksportujemo kao default funkciju AboutPage()
 -otvorimo rutu http://localhost:3000/about
+
+10. Link Component
+-otvorimo link: https://nextjs.org/docs/pages/api-reference/components/link
+-u komponentu app/page.js importujemo komponentu Link
+-u roditelj div element dodajemo komponentu Link sa otvorenim i zatvorenim tagom
+-komponenti Link dodajemo prop href i className
+-ponovimo isti postupak u komponenti about/page.js
