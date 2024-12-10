@@ -56,3 +56,7 @@ Quiz 1: Fundamentals Quiz
 14. TailwindCSS
 
 15. DaisyUI
+
+16. Layout File
+-u komponenti layout.js, promjenjen opis projekta u varijabli const metadata
+-u jsx-u kreiran nav element 
