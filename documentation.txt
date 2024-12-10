@@ -20,3 +20,6 @@ Section 01: Next.js Tutorial
 
 07. Files and Folder Structure
 -u nextjs-tutorial/README.md fajl dodan opis izrade projekta
+
+08. Home Page
+-u app/page.js komponenti kreiramo i eksportujemo kao default funkciju HomePage()
