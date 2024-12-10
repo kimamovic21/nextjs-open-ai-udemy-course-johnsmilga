@@ -1,9 +1,9 @@
 const PrismaExamplePage = () => {
   return (
     <div>
-      <h1 className='text-7xl'>
+      <h2 className='text-7xl'>
         Prisma Example Page
-      </h1>
+      </h2>
     </div>
   );
 };

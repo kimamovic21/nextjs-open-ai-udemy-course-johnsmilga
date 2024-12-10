@@ -91,3 +91,11 @@ Quiz 1: Fundamentals Quiz
 -u dogadaj onClick dodajemo anonimnu funkciju
 -u anonimnu funkciju proslijedujemo funkciju setCount()
 -dodajemo direktivu 'use client'
+
+20. Fetch data
+-u komponenti drinks/page.js, funkciji DrinksPage() dodajemo asinhronost
+-kreiramo varijablu const url
+-u funkciji DrinksPage() dodajemo metodu await fetch(url)
+-vrijednost metode await fetch(url) pohranjujemo u varijablu const response
+-dodajemo metodu await response.json()
+-vrijednost metode await response.json() pohranjujemo u varijablu const data
