@@ -11,3 +11,6 @@ Section 01: Next.js Tutorial
 -otvorimo web stranicu: https://nextjs.org/
 
 04. Tutorial Overview
+
+05. Update !!!
+-instalirati verziju 14 Next.js
