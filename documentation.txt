@@ -125,3 +125,15 @@ Quiz 1: Fundamentals Quiz
 -u folderu drinks kreiramo folder [id] i komponentu page.js
 -u [id]/page.js fajlu kreiramo i eksportujemo funkciju SingleDrinkPage() kao default
 -funkciji SingleDrinkPage() dodajemo parametar destruktuirani prop params
+
+25. Drinks List - Challange
+-u folderu components kreiramo komponentu DrinksList.jsx
+-funkciji DrinksList() dodajemo parametar destruktuirani prop drinks
+-u komponentu drinks/page.js importujemo komponentu DrinksList.jsx
+-u jsx-u dodajemo komponentu DrinksList sa prop drinks
+-u komponenti DrinksList.jsx, u jsx-u kreiramo ul element kao roditelj element sa Tailwind CSS klasama
+-u ul element dodajemo metodu drinks.map()
+-u funkciji map() kreiramo li element sa prop key
+-importujemo komponentu Link
+-u li element dodajemo komponentu Link sa prop href
+-u prop href dodajemo dinamicki link
