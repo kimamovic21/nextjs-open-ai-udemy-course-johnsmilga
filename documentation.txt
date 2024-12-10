@@ -44,3 +44,11 @@ Quiz 1: Fundamentals Quiz
 12. First Challenge
 -u folderu app kreiramo folder client, drinks, prisma-example, query i tasks
 -u svakom folderu kreiramo komponente page.js
+
+13. CSS
+-otvorimo web stranicu: https://daisyui.com/
+-otvorimo web stranicu: https://tailwindcss.com/
+-otvorimo link: https://www.npmjs.com/package/daisyui
+-otvorimo link: https://www.npmjs.com/package/@tailwindcss/typography
+-u terminalu instaliramo pakete Daisy UI i Tailwind CSS Typography
+-u terminalu ukucamo komande: npm i -D daisyui@3.9.4 i npm i @tailwindcss/typography
