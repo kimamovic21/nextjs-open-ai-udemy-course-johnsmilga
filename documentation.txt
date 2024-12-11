@@ -236,3 +236,5 @@ Quiz 1: Fundamentals Quiz
 -u div element dodajemo komponentu Link sa prop href i className
 -importujemo komponentu DeleteForm.jsx
 -u div element dodajemo komponentu DeleteForm sa prop id
+
+35. Server Actions - Info
