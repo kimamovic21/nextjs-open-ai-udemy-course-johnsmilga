@@ -163,3 +163,10 @@ Quiz 1: Fundamentals Quiz
 -u komponenti [id]/page.js dodajemo komponentu Image sa prop src, alt, width, height, className i priority
 -otvorimo link: https://stackoverflow.com/questions/76164057/next-js-hostname-not-configured-under-images-in-next-config-js-even-though-remot
 -u next.config.mjs fajl dodajemo objekt images i niz remotePatterns
+
+29. Responsive Images
+-u komponentu DrinksList.jsx importujemo komponentu Image
+-u jsx-u ul elementu dodajemo Tailwind CSS Grid klase
+-u jsx-u, u komponenti Link kreiramo div element sa Tailwind CSS klasu
+-u div element dodajemo komponentu Image
+-komponenti Image dodajemo prop src, alt, className, sizes i fill

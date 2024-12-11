@@ -756,7 +756,8 @@ module.exports = nextConfig;
 ## Remote Images - Responsive
 
 - The fill prop allows your image to be sized by its parent element
-- sizes property helps the browser select the most appropriate image size to load based on the user's device and screen size, improving website performance and user experience.
+- sizes property helps the browser select the most appropriate image size to load based on the user's device 
+  and screen size, improving website performance and user experience.
 
   DrinksList.jsx
 
