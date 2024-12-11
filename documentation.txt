@@ -192,3 +192,10 @@ Quiz 1: Fundamentals Quiz
 -otvorenim link: https://www.prisma.io/docs/guides/other/troubleshooting-orm/help-articles/nextjs-prisma-client-dev-practices#solution
 -kreiramo folder utils i db.ts fajl
 -u db.ts fajl kopiramo kod iz dokumentacije
+
+32. Prisma Model
+-u schema.prisma fajlu kreiramo model Task
+-u terminalu ukucamo komandu npx prisma migrate dev 
+-odaberemo ime task model
+-generisemo folder migrations i fajlove unutar njega
+-u terminalu ukucamo komandu npx prisma studio
