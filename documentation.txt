@@ -199,3 +199,21 @@ Quiz 1: Fundamentals Quiz
 -odaberemo ime task model
 -generisemo folder migrations i fajlove unutar njega
 -u terminalu ukucamo komandu npx prisma studio
+
+33. Prisma CRUD
+-otvorimo link: https://www.prisma.io/docs/concepts/components/prisma-client/crud
+-u komponentu prisma-example importujemo instancu prisma iz foldera utils
+-kreiramo asinhronu funkciju prismaHandlers()
+-u funkciju prismaHandlers() dodajemo metodu await prisma.task.create()
+-u funkciju create() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekt data
+-dodajemo metodu await prisma.task.findMany()
+-vrijednost metode await prisma.task.findMany() pohranjujemo u varijablu const allTasks
+-u funkciju createMany() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekt orderBy
+-u funkciju prismaHandlers() dodajemo metodu return allTasks
+-funkciji PrismaExamplePage() dodajemo asinhronost
+-u funkciju PrismaExamplePage() dodajemo funkciju await prismaHandlers()
+-vrijednost funkcije await prismaHandlers() pohranjujemo u varijablu const tasks
+-u jsx-u, u div element dodajemo metodu tasks?.map()
+-u funkciji map() kreiramo h2 element sa prop key i className
