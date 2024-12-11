@@ -1,9 +1,11 @@
+import TaskForm from '@/components/TaskForm';
+import TaskList from '@/components/TaskList';
+
 const TasksPage = () => {
   return (
-    <div>
-      <h2 className='text-7xl'>
-        Tasks Page
-      </h2>
+    <div className='max-w-lg'>
+      <TaskForm />
+      <TaskList />
     </div>
   );
 };

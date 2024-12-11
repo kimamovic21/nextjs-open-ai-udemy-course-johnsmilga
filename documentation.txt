@@ -82,7 +82,7 @@ Quiz 1: Fundamentals Quiz
 -otvorimo link: https://nextjs.org/docs/app/building-your-application/rendering/server-components
 -otvorimo link: https://nextjs.org/docs/app/building-your-application/rendering/client-components
 
-19. Counter Challange
+19. Counter Challenge
 -u komponenti app/page.js, HTML elementima dodajemo Tailwind CSS klase
 -u komponentu client/page.js importujemo funkciju useState iz paketa React
 -kreiramo state varijablu const count i set funkciju setCount
@@ -217,3 +217,22 @@ Quiz 1: Fundamentals Quiz
 -vrijednost funkcije await prismaHandlers() pohranjujemo u varijablu const tasks
 -u jsx-u, u div element dodajemo metodu tasks?.map()
 -u funkciji map() kreiramo h2 element sa prop key i className
+
+34. Display Tasks - Challenge
+-u folderu components kreiramo tri jsx komponente: TaskForm, TaskList i DeleteForm
+-u komponentu tasks/page.js importujemo komponente TaskForm.jsx i TaskList.jsx
+-u komponenti TaskList.jsx, funkciji TaskList() dodajemo asinhronost
+-u funkciju TaskList() dodajemo metodu await.prisma.task.findMany()
+-vrijednost metode await.prisma.task.findMany() pohranjujemo u varijablu const tasks
+-u funkciju findMany() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekt orderBy
+-dodajemo uslov (tasks.length === 0) i h2 element sa Tailwind CSS klasama
+-importujemo instancu prisma i komponentu Link
+-u jsx-u kreiramo ul element
+-u ul element dodajemo metodu tasks?.map()
+-u funkciji map() kreiramo li element sa prop key i className
+-u li elementu kreiramo element h2 i div
+-h2 elementu dodajemo prop className i dinamicke klasu
+-u div element dodajemo komponentu Link sa prop href i className
+-importujemo komponentu DeleteForm.jsx
+-u div element dodajemo komponentu DeleteForm sa prop id
