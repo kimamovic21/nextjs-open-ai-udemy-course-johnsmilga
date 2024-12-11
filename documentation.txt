@@ -170,3 +170,9 @@ Quiz 1: Fundamentals Quiz
 -u jsx-u, u komponenti Link kreiramo div element sa Tailwind CSS klasu
 -u div element dodajemo komponentu Image
 -komponenti Image dodajemo prop src, alt, className, sizes i fill
+
+30. More Routing
+-u folderu app kreiramo folder _css i styles.css fajl
+-kreiramo foldere (dashboard), auth i komponentu page.js
+-u folderu auth kreiramo folder [[...sign-in]] i komponentu route.js
+-u pretrazivacu otvorimo rutu: http://localhost:3000/auth
