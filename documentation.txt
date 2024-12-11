@@ -238,3 +238,25 @@ Quiz 1: Fundamentals Quiz
 -u div element dodajemo komponentu DeleteForm sa prop id
 
 35. Server Actions - Info
+
+36. First Server Action
+-u komponenti TaskForm.jsx, u jsx-u kreiramo form element kao roditelj element
+-importujemo instancu prisma
+-u form elementu kreiramo div element sa Tailwind CSS klasama
+-u div elementu kreiramo elemente input i button sa Tailwind CSS klasama
+-input elementu dodajemo prop type, className, placeholder, name i required
+-button elementu dodajemo prop type i className
+-funkciji TaskForm() dodajemo asinhronost
+-kreiramo asinhronost funkciju createTask()
+-form elementu dodajemo prop action
+-u prop action proslijedujemo funkciju createTask
+-funkciji createTask() dodajemo parametar formData
+-u funkciju createTask dodajemo direktivu 'use server'
+-dodajemo metodu formData.get()
+-vrijednost metode formData.get() pohranjujemo u varijablu const content
+-dodajemo metodu await prisma.task.create()
+-u funkciju create() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekt data
+-importujemo funkciju revalidatePath iz paketa Next Cache
+-otvorimo link: https://nextjs.org/docs/app/api-reference/functions/revalidatePath
+-u funkciju createTask() dodajemo funkciju revalidatePath('/tasks')
