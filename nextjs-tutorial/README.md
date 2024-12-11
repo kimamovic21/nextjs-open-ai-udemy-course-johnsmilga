@@ -695,11 +695,14 @@ export default SingleDrink;
 
 - To use a remote image, the src property should be a URL string.
 
-- Since Next.js does not have access to remote files during the build process, you'll need to provide the width, height and optional blurDataURL props manually.
+- Since Next.js does not have access to remote files during the build process, you'll need to provide the width, 
+  height and optional blurDataURL props manually.
 
-- The width and height attributes are used to infer the correct aspect ratio of image and avoid layout shift from the image loading in. The width and height do not determine the rendered size of the image file.
+- The width and height attributes are used to infer the correct aspect ratio of image and avoid layout shift from 
+  the image loading in. The width and height do not determine the rendered size of the image file.
 
-- To safely allow optimizing images, define a list of supported URL patterns in next.config.js. Be as specific as possible to prevent malicious usage.
+- To safely allow optimizing images, define a list of supported URL patterns in next.config.js. Be as specific as 
+  possible to prevent malicious usage.
 
 - restart dev server
 

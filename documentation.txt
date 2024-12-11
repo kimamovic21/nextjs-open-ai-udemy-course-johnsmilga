@@ -158,3 +158,8 @@ Quiz 1: Fundamentals Quiz
 -otvorimo link: https://nextjs.org/docs/pages/api-reference/components/image
 -importujemo komponentu Image iz paketa Next Image
 -u jsx-u dodajemo komponentu Image sa prop src, alt i className
+
+28. Remote Images
+-u komponenti [id]/page.js dodajemo komponentu Image sa prop src, alt, width, height, className i priority
+-otvorimo link: https://stackoverflow.com/questions/76164057/next-js-hostname-not-configured-under-images-in-next-config-js-even-though-remot
+-u next.config.mjs fajl dodajemo objekt images i niz remotePatterns
