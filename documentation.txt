@@ -176,3 +176,19 @@ Quiz 1: Fundamentals Quiz
 -kreiramo foldere (dashboard), auth i komponentu page.js
 -u folderu auth kreiramo folder [[...sign-in]] i komponentu route.js
 -u pretrazivacu otvorimo rutu: http://localhost:3000/auth
+
+31. Prisma Setup
+-otvorimo web stranicu: https://www.prisma.io/
+-otvorimo link: https://www.npmjs.com/package/prisma
+-otvorimo link: https://www.npmjs.com/package/@prisma/client
+-u terminalu instaliramo pakete Prisma i Prisma Client
+-u terminalu ukucamo komande npm install prisma --save-dev i npm install @prisma/client
+-u terminalu ukucamo komandu npx prisma init
+-generisemo folder prisma i schema.prisma fajl
+-u .gitignore fajl dodajemo .env fajl
+-otvorimo link: https://www.prisma.io/docs/getting-started/quickstart-sqlite
+-u .env fajl dodajemo u varijablu DATABASE_URL vrijednost "file:./dev.db"
+-u schema.prisma fajl dodajemo u objekt datasource db key - value par  provider = "sqlite"
+-otvorenim link: https://www.prisma.io/docs/guides/other/troubleshooting-orm/help-articles/nextjs-prisma-client-dev-practices#solution
+-kreiramo folder utils i db.ts fajl
+-u db.ts fajl kopiramo kod iz dokumentacije

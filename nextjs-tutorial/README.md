@@ -842,7 +842,8 @@ npm install @prisma/client
 npx prisma init
 ```
 
-This creates a new prisma directory with your Prisma schema file and configures SQLite as your database. You're now ready to model your data and create your database with some tables.
+This creates a new prisma directory with your Prisma schema file and configures SQLite as your database. 
+You're now ready to model your data and create your database with some tables.
 
 ```prisma
 generator client {
@@ -865,7 +866,9 @@ DATABASE_URL = 'file:./dev.db';
 
 ## Setup Instance
 
-In development, the command next dev clears Node.js cache on run. This in turn initializes a new PrismaClient instance each time due to hot reloading that creates a connection to the database. This can quickly exhaust the database connections as each PrismaClient instance holds its own connection pool.
+In development, the command next dev clears Node.js cache on run. This in turn initializes a new PrismaClient 
+instance each time due to hot reloading that creates a connection to the database. This can quickly exhaust 
+the database connections as each PrismaClient instance holds its own connection pool.
 
 (Prisma Instance)[https://www.prisma.io/docs/guides/other/troubleshooting-orm/help-articles/nextjs-prisma-client-dev-practices#solution]
 
