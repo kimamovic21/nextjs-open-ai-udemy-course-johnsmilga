@@ -149,3 +149,12 @@ Quiz 1: Fundamentals Quiz
 -u funkciji SingleDrinkPage() kreiramo varijablu const data
 -kreiramo varijable const title i const imgSrc
 -u jsx-u, u roditelj div element dodajemo komponentu Link sa prop href i className
+
+27. Static Images
+-u komponentu [id]/page.js importujemo sliku drinkImg
+-preuzmemo sliku
+-kreiramo folder public
+-preuzetu sliku pohranjujemo u folder public
+-otvorimo link: https://nextjs.org/docs/pages/api-reference/components/image
+-importujemo komponentu Image iz paketa Next Image
+-u jsx-u dodajemo komponentu Image sa prop src, alt i className
