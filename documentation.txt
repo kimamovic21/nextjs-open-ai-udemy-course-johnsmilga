@@ -260,3 +260,14 @@ Quiz 1: Fundamentals Quiz
 -importujemo funkciju revalidatePath iz paketa Next Cache
 -otvorimo link: https://nextjs.org/docs/app/api-reference/functions/revalidatePath
 -u funkciju createTask() dodajemo funkciju revalidatePath('/tasks')
+
+37. Refactor App
+-u folderu utils kreiramo actions.js fajl
+-u actions.js fajl dodajemo direktivu 'use server'
+-importujemo funkciju revalidatePath i instancu prisma
+-u actions.js fajl premjestamo funkciju createTask()
+-kreiramo asinhronu funkciju getAllTasks()
+-u funkciju getAllTasks() dodajemo izjavu return prisma.task.findMany()
+-u komponentu TaskList.jsx importujemo funkciju getAllTasks() iz actions.js fajla
+-vrijednost funkcije await getAllTasks() pohranjujemo u varijablu const tasks
+-u komponentu TaskForm.jsx importujemo funkcije createTask iz actions.js fajla

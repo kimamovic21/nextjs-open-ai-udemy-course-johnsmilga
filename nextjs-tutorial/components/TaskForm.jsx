@@ -1,19 +1,4 @@
-import { revalidatePath } from 'next/cache';
-import prisma from '@/utils/db';
-
-const createTask = async (formData) => {
-  'use server';
-  const content = formData.get('content');
-  console.log(content);
-
-  await prisma.task.create({
-    data: {
-      content,
-    },
-  });
-
-  revalidatePath('/tasks');
-};
+import { createTask } from '@/utils/actions';
 
 const TaskForm = async () => {
   return (
