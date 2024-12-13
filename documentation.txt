@@ -285,3 +285,22 @@ Quiz 1: Fundamentals Quiz
 -u prop action proslijedujemo funkciju deleteTask
 -u form elementu kreiramo input element sa prop type, name i value
 -kreiramo button element sa prop className
+
+39. Edit Task - Setup
+-u actions.js fajlu kreiramo i eksportujemo asinhrone funkcije getTask() i editTask()
+-funkciji getTask() dodajemo parametar id
+-funkciji editTask() dodajemo parametar formData
+-u folderu components kreiramo komponentu EditForm.jsx
+-u folderu tasks kreiramo folder [id] i komponentu page.js
+-u komponenti [id]/page.js kreiramo funkciju EditTaskPage()
+-funkciji EditTaskPage() dodajemo parametar destruktuirani prop params
+-funkciji EditTaskPage() dodajemo asinhronost
+-importujemo funkciju getTask() iz foldera utils
+-u funkciju EditTaskPage() dodajemo funkciju await getTask(params.id)
+-vrijednost funkcije await getTask(params.id) pohranjujemo u varijablu const task
+-u actions.js fajlu, u funkciju getTask() dodajemo metodu return prisma.task.findUnique()
+-u komponenti [id]/page.js, roditelj div elementu dodajemo prop className
+-importujemo komponente Link i EditForm.jsx
+-u roditelj div element dodajemo komponentu Link 
+-komponenti Link dodajemo prop href i className
+-ispod komponente Link dodajemo komponentu EditForm sa prop task
