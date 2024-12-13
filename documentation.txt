@@ -271,3 +271,17 @@ Quiz 1: Fundamentals Quiz
 -u komponentu TaskList.jsx importujemo funkciju getAllTasks() iz actions.js fajla
 -vrijednost funkcije await getAllTasks() pohranjujemo u varijablu const tasks
 -u komponentu TaskForm.jsx importujemo funkcije createTask iz actions.js fajla
+
+38. Delete Task
+-u actions.js fajlu kreiramo i eksportujemo asinhronu funkciju deleteTask()
+-funkciji deleteTask() dodajemo parametar formData
+-u funkciji deleteTask() kreiramo varijablu const id
+-dodajemo metodu await prisma.task.delete()
+-dodajemo funkciju revalidatePath('/tasks')
+-u komponentu DeleteForm.jsx importujemo funkciju deleteTask iz foldera utils
+-u jsx-u kreiramo form element kao roditelj element
+-funkciji DeleteForm() dodajemo parametar destruktuirani prop id
+-form elementu dodajemo prop action
+-u prop action proslijedujemo funkciju deleteTask
+-u form elementu kreiramo input element sa prop type, name i value
+-kreiramo button element sa prop className
