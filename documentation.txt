@@ -363,8 +363,23 @@ Quiz 1: Fundamentals Quiz
 43. Zod Library
 -otvorimo web stranicu: https://zod.dev/
 -otvorimo link: https://www.npmjs.com/package/zod
--u terminalu instaliramo paket Zod sa komandom 
+-u terminalu instaliramo paket Zod sa komandom npm i zod
 -u actions.js fajlu importujemo instancu z iz paketa Zod
 -u funkciji createTaskCustom() dodajemo metodu z.object()
 -vrijednost metode z.object() pohranjujemo u varijablu const Task
 -u blok koda try dodajemo metodu Task.parse()
+
+44. Providers
+-otvorimo link: https://www.npmjs.com/package/react-hot-toast
+-u terminlu instaliramo paket React Hot Toast sa komandom npm i react-hot-toast
+-u folderu app kreiramo providers.js fajl
+-u providers.js fajlu kreiramo i eksportujemo funkciju Providers() kao default
+-funkciji Providers() dodajemo parametar destruktuirani prop children
+-dodajemo direktivu 'use client'
+-importujemo komponentu Toaster iz paketa React Hot Toaster
+-u jsx-u dodajemo prazan fragment kao roditelj element
+-u komponentu layout.js importujemo komponentu Providers
+-u main element dodajemo komponentu Providers sa otvorenim i zatvorenim tagom
+-u komponentu TaskFormCustom.jsx importujemo funkcije useEffect i toast
+-u funkciju TaskFormCustom() dodajemo funkciju useEffect()
+-u funkciju useEffect() dodajemo dva uslova if
