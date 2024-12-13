@@ -345,3 +345,17 @@ Quiz 1: Fundamentals Quiz
 -u prop disabled proslijedujemo varijablu pending
 -u button elementu dodajemo ternarni uslov za varijablu pending
 -u funkciju TaskFormCustom() dodajemo komponentu SubmitButton
+
+42. Error Checking
+-u actions.js fajlu, u funkciju createTaskCustom() dodajemo blokove koda try - catch
+-funkciji createTaskCustom() dodajemo parametar prevState
+-u blok koda try dodajemo metodu awat prisma.task.create() i revalidatePath()
+-dodajemo izjavu return objekt poruku
+-u blok koda catch dodajemo izjavu return objekt poruku
+-u komponentu TaskFormCustom.jsx importujemo funkciju useFormState iz paketa React Dom
+-kreiramo varijablu const initialState
+-u funkciji TaskFormCustom() dodajemo funkciju useFormState(createTaskCustom, initialState)
+-vrijednost funkcije useFormState() pohranjujemo u varijable const [state, formAction]
+-u prop action proslijedujemo funkciju formAction
+-u form elementu dodajemo ternarni uslov state.message
+-prvi dio ternarnog uslova je p element, a drugi dio ternarnog uslova je vrijednost null
