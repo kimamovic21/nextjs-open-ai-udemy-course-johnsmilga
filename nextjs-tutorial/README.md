@@ -1555,7 +1555,8 @@ export const createTaskCustom = async (prevState, formData) => {
 - required attribute a great start
 - zod library
 
-The Zod library is a TypeScript-first schema declaration and validation library that allows developers to create complex type checks with simple syntax.
+The Zod library is a TypeScript-first schema declaration and validation library that allows developers to 
+create complex type checks with simple syntax.
 
 [Zod](https://zod.dev/)
 

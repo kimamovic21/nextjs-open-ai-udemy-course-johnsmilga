@@ -359,3 +359,12 @@ Quiz 1: Fundamentals Quiz
 -u prop action proslijedujemo funkciju formAction
 -u form elementu dodajemo ternarni uslov state.message
 -prvi dio ternarnog uslova je p element, a drugi dio ternarnog uslova je vrijednost null
+
+43. Zod Library
+-otvorimo web stranicu: https://zod.dev/
+-otvorimo link: https://www.npmjs.com/package/zod
+-u terminalu instaliramo paket Zod sa komandom 
+-u actions.js fajlu importujemo instancu z iz paketa Zod
+-u funkciji createTaskCustom() dodajemo metodu z.object()
+-vrijednost metode z.object() pohranjujemo u varijablu const Task
+-u blok koda try dodajemo metodu Task.parse()
