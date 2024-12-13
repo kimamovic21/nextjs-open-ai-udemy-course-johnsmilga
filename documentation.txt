@@ -299,8 +299,31 @@ Quiz 1: Fundamentals Quiz
 -u funkciju EditTaskPage() dodajemo funkciju await getTask(params.id)
 -vrijednost funkcije await getTask(params.id) pohranjujemo u varijablu const task
 -u actions.js fajlu, u funkciju getTask() dodajemo metodu return prisma.task.findUnique()
+-u funkciju findUnique() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekt where
 -u komponenti [id]/page.js, roditelj div elementu dodajemo prop className
 -importujemo komponente Link i EditForm.jsx
 -u roditelj div element dodajemo komponentu Link 
 -komponenti Link dodajemo prop href i className
 -ispod komponente Link dodajemo komponentu EditForm sa prop task
+
+40. Edit Task - Complete
+-u komponenti EditForm.jsx destruktuiramo varijable const { id, completed, content }
+-dodajemo direktivu 'use client'
+-u jsx-u kreiramo form element kao roditelj element
+-form elementu dodajemo prop action i className
+-importujemo funkciju editTask iz foldera utils
+-u prop action proslijedujemo funkciju editTask
+-u form elementu kreiramo input element sa prop type, name i value
+-kreiramo jos jedan input element sa prop type, required, defaultValue, name i className
+-kreiramo div element sa Daisy UI klasama
+-u div elementu kreiramo elemente label, span i input
+-input elementu dodajemo prop type, defaultChecked, id, name i className
+-kreiramo button element sa Daisy UI klasama
+-u actions.js fajlu kreiramo varijable const id, const content i const completed
+-dodajemo metodu await prisma.task.update()
+-u funkciju update() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekte where i data
+-otvorimo link: https://nextjs.org/docs/app/api-reference/functions/redirect
+-importujemo funkciju redirect iz paketa Next Navigation
+-u funkciju editTask() dodajemo funkciju redirect('/tasks')
