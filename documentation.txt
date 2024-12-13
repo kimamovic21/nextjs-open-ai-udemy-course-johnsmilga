@@ -327,3 +327,21 @@ Quiz 1: Fundamentals Quiz
 -otvorimo link: https://nextjs.org/docs/app/api-reference/functions/redirect
 -importujemo funkciju redirect iz paketa Next Navigation
 -u funkciju editTask() dodajemo funkciju redirect('/tasks')
+
+41. Pending State
+-otvorimo link: https://react.dev/reference/react-dom/hooks/useFormStatus
+-u actions.js fajlu kreiramo i eksportujemo asinhronu funkciju createTaskCustom()
+-u funkciju createTaskCustom() dodajemo metodu await new Promise()
+-kreiramo komponentu TaskFormCustom.jsx
+-u komponentu tasks/page.js importujemo komponentu TaskFormCustom.jsx
+-u komponentu TaskFormCustom.jsx importujemo funkciju createTaskCustom iz foldera utils
+-dodajemo direktivu 'use client'
+-importujemo funkciju useFormStatus iz paketa React Dom
+-kreiramo funkciju SubmitButton()
+-u funkciju SubmitButton() dodajemo funkciju useFormStatus()
+-vrijednost funkcije useFormStatus() pohranjujemo u destruktuiranu varijablu const { pending }
+-u jsx-u premjestamo button elemente iz funkcije TaskFormCustom()
+-button elementu dodajemo prop disabled
+-u prop disabled proslijedujemo varijablu pending
+-u button elementu dodajemo ternarni uslov za varijablu pending
+-u funkciju TaskFormCustom() dodajemo komponentu SubmitButton
