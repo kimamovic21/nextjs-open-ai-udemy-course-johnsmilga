@@ -441,3 +441,6 @@ Quiz 1: Fundamentals Quiz
 -kreiramo example.env fajl za primjer varijabli koje je potrebno kreirati
 -u shcema.prisma fajlu, u objektu datasource db dodajemo opciju provider = "postgresql"
 -u terminalu ukucamo komandu npx prisma db push
+
+51. PlanetScale
+-otvorimo web stranicu: https://planetscale.com/
