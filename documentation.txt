@@ -465,3 +465,8 @@ Quiz 1: Fundamentals Quiz
 -na web stranici Vercel kreiramo novi projekt
 -odaberemo opciju da kod importujemo sa Github repozitorija
 -u projekt dodajemo varijablu iz .env fajla
+
+
+Section 02: GPTGenius App
+
+55. Important Info !!!
