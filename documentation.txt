@@ -395,3 +395,7 @@ Quiz 1: Fundamentals Quiz
 -u prop disabled proslijedujemo vrijednost varijable pending
 -u button element dodajemo ternarni operator za varijablu pending
 -u funkciju DeleteForm() dodajemo komponentu SubmitButton 
+
+46. Route Handlers - Info
+-otvorimo link: https://nextjs.org/docs/app/building-your-application/routing/route-handlers
+-otvorimo aplikaciju Postman
