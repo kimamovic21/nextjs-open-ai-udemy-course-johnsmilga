@@ -126,7 +126,7 @@ Quiz 1: Fundamentals Quiz
 -u [id]/page.js fajlu kreiramo i eksportujemo funkciju SingleDrinkPage() kao default
 -funkciji SingleDrinkPage() dodajemo parametar destruktuirani prop params
 
-25. Drinks List - Challange
+25. Drinks List - Challenge
 -u folderu components kreiramo komponentu DrinksList.jsx
 -funkciji DrinksList() dodajemo parametar destruktuirani prop drinks
 -u komponentu drinks/page.js importujemo komponentu DrinksList.jsx
@@ -383,3 +383,15 @@ Quiz 1: Fundamentals Quiz
 -u komponentu TaskFormCustom.jsx importujemo funkcije useEffect i toast
 -u funkciju TaskFormCustom() dodajemo funkciju useEffect()
 -u funkciju useEffect() dodajemo dva uslova if
+
+45. Delete Button - Challenge
+-u komponentu DeleteForm.jsx dodajemo direktivu 'use client'
+-importujemo funkciju useFormStatus iz paketa React Dom
+-kreiramo funkciju SubmitButton()
+-u funkciju SubmitButton() dodajemo funkciji useFormStatus()
+-vrijednost funkcije useFormStatus() pohranjujemo u destruktuiranu varijablu const { pending }
+-u jsx-u kreiramo button element sa Daisy UI klasama
+-button elementu dodajemo prop disabled
+-u prop disabled proslijedujemo vrijednost varijable pending
+-u button element dodajemo ternarni operator za varijablu pending
+-u funkciju DeleteForm() dodajemo komponentu SubmitButton 
