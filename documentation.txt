@@ -459,3 +459,9 @@ Quiz 1: Fundamentals Quiz
 -u komponenti tasks/page.js kreiramo i eksportujemo varijablu const dynamic
 -u terminalu ukucamo komandu npm run build
 -u terminalu ukucamo komandu npm start
+
+54. Deploy
+-otvorimo web stranicu: https://vercel.com/
+-na web stranici Vercel kreiramo novi projekt
+-odaberemo opciju da kod importujemo sa Github repozitorija
+-u projekt dodajemo varijablu iz .env fajla
