@@ -399,3 +399,12 @@ Quiz 1: Fundamentals Quiz
 46. Route Handlers - Info
 -otvorimo link: https://nextjs.org/docs/app/building-your-application/routing/route-handlers
 -otvorimo aplikaciju Postman
+
+47. Route Handlers - GET
+-u folderu app kreiramo foldere api, tasks i route.js fajl
+-u tasks/route.js fajl importujemo instancu db iz foldera utils
+-kreiramo i eksportujemo asinhronu funkciju GET() sa parametrom request
+-u funkciju GET() dodajemo metodu await db.task.findMany()
+-vrijednost metode await db.task.findMany() pohranjujemo u varijablu const tasks
+-dodajemo izjavu return Response.json()
+-u pretrazivacu otvorimo rutu: http://localhost:3000/api/tasks
