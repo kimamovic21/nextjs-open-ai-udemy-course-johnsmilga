@@ -472,3 +472,6 @@ Section 02: GPTGenius App
 55. Important Info !!!
 
 56. Intro
+
+57. New App
+-preuzmemo starter folder gptgenius
