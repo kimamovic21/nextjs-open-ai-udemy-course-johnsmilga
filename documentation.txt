@@ -408,3 +408,15 @@ Quiz 1: Fundamentals Quiz
 -vrijednost metode await db.task.findMany() pohranjujemo u varijablu const tasks
 -dodajemo izjavu return Response.json()
 -u pretrazivacu otvorimo rutu: http://localhost:3000/api/tasks
+
+48. Route Handlers - POST
+-u posts/route.js fajlu kreiramo i eksportujemo asinhronu funkciju POST() sa parametrom request
+-u funkciju POST() dodajemo metodu await request.json()
+-vrijednost metode await request.json() pohranjujemo u varijablu const data
+-dodajemo metodu await db.task.create()
+-u funkciju createTask() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekt data
+-vrijednost metode await db.task.create() pohranjujemo u varijablu const task
+-dodajemo izjavu Response.json()
+-importujemo funkciju NextResponse iz paketa Next Server
+-u funkcije GET() i POST() dodajemo funkciju NextResponse()
