@@ -420,3 +420,15 @@ Quiz 1: Fundamentals Quiz
 -dodajemo izjavu Response.json()
 -importujemo funkciju NextResponse iz paketa Next Server
 -u funkcije GET() i POST() dodajemo funkciju NextResponse()
+
+49. Middleware
+-otvorimo link: https://nextjs.org/docs/app/building-your-application/routing/middleware
+-kreiramo middleware.js fajl
+-u middleware.js fajlu kreiramo i eksportujemo funkciju middleware()
+-u funkciju middleware() dodajemo izjavu return Response.json()
+-kreiramo i eksportujemo varijablu objekt const config
+-u pretrazivacu otvorimo rutu: http://localhost:3000/about
+-u objekt config dodajemo niz matcher
+-importujemo funkciju NextResponse iz paketa Next Server
+-u funkciju middleware() dodajemo izjavu return NextResponse()
+-u pretrazivacu otvorimo rutu: http://localhost:3000/about
