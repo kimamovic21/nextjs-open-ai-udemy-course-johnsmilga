@@ -451,3 +451,11 @@ Quiz 1: Fundamentals Quiz
 -obrisemo sve taskove koje smo imali
 -u terminalu ukucamo komandu npm run build
 -u terminalu ukucamo komandu npm start
+
+53. Force Dynamic
+-otvorimo link: https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config
+-u folderu app/tasks kreiramo loading.js fajl
+-u loading.js fajlu kreiramo i eksportujemo funkciju loading()
+-u komponenti tasks/page.js kreiramo i eksportujemo varijablu const dynamic
+-u terminalu ukucamo komandu npm run build
+-u terminalu ukucamo komandu npm start
