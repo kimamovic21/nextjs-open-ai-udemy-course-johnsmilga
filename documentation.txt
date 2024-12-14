@@ -432,3 +432,12 @@ Quiz 1: Fundamentals Quiz
 -importujemo funkciju NextResponse iz paketa Next Server
 -u funkciju middleware() dodajemo izjavu return NextResponse()
 -u pretrazivacu otvorimo rutu: http://localhost:3000/about
+
+50. Render (optional)
+-otvorimo web stranicu: https://render.com/
+-otvorimo link: https://dashboard.render.com/new/database
+-kreiramo PostgreSQL Projekt udemy-nextjs-openai
+-u .env fajl dodajemo vrijednost varijable External Database URL sa web servisa Render
+-kreiramo example.env fajl za primjer varijabli koje je potrebno kreirati
+-u shcema.prisma fajlu, u objektu datasource db dodajemo opciju provider = "postgresql"
+-u terminalu ukucamo komandu npx prisma db push
