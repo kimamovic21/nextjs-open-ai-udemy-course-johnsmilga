@@ -444,3 +444,10 @@ Quiz 1: Fundamentals Quiz
 
 51. PlanetScale
 -otvorimo web stranicu: https://planetscale.com/
+
+52. Local Build
+-u package.json fajl dodajemo u komandu "build": "npx prisma generate && next build"
+-u komponenti prisma-example/page.js dodajemo uslov if (tasks.length === 0)
+-obrisemo sve taskove koje smo imali
+-u terminalu ukucamo komandu npm run build
+-u terminalu ukucamo komandu npm start
