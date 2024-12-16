@@ -513,3 +513,6 @@ Section 02: GPTGenius App
 -u komponentu page.js importujemo komponentu SignIn iz paketa Clerk
 -u .env.local fajlu kreiramo nove cetiri env varijable
 -u komponente page.js za kreiranje racuna i prijavu kreiramo div element sa Tailwind CSS klasama
+
+63. React Icons
+-otvorimo web stranicu: https://react-icons.github.io/react-icons/
