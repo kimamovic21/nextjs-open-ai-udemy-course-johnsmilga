@@ -485,3 +485,5 @@ Section 02: GPTGenius App
 59. Home Page
 -u komponenti app/page.js, u jsx-u kreiramo HTML elemente sa DaisyUI klasama
 -importujemo komponentu Link iz paketa Next Link
+
+60. Important Update !!!
