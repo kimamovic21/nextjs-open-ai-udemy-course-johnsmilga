@@ -487,3 +487,19 @@ Section 02: GPTGenius App
 -importujemo komponentu Link iz paketa Next Link
 
 60. Important Update !!!
+
+61. Clerk Setup
+-otvorimo web stranicu: https://clerk.com
+-kreiramo fajlove .env.local i .env.local.example
+-u .env.local fajlu kreiramo env varijable NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY i CLERK_SECRET_KEY
+-u .env.local.example fajl dodajemo primjer varijabli koje je potrebno kreirati
+-otvorimo link: https://www.npmjs.com/package/@clerk/nextjs
+-otvorimo link: https://clerk.com/docs/quickstarts/nextjs
+-u terminalu instaliramo paket Clerk sa komandom npm i @clerk/nextjs@5
+-u komponentu app/layout.js importujemo komponentu ClerkProvider iz paketa Clerk
+-u jsx-u dodajemo komponentu ClerkProvider sa otvorenim i zatvorenim tagom
+-kreiramo middleware.ts fajl
+-u middleware.ts fajl importujemo funkciju authMiddleware iz paketa Clerk
+-kreiramo i eksportujemo funkciju authMiddleware()
+-kreiramo i eksportujemo varijablu objekt const config
+-u pretrazivacu otvorimo rutu: http://localhost:3000/chat

@@ -84,7 +84,8 @@ NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY = your_publishable_key;
 CLERK_SECRET_KEY = your_secret_key;
 ```
 
-Environment variables with this `NEXT_PUBLIC_` prefix are exposed to client-side JavaScript code, while those without the prefix are only accessible on the server-side and are not exposed to the client-side code.
+Environment variables with this `NEXT_PUBLIC_` prefix are exposed to client-side JavaScript code, while those without 
+the prefix are only accessible on the server-side and are not exposed to the client-side code.
 
 ```sh
 NEXT_PUBLIC_
@@ -107,7 +108,7 @@ export default function RootLayout({ children }) {
       </html>
     </ClerkProvider>
   );
-}
+};
 ```
 
 middleware.ts
@@ -118,6 +119,7 @@ import { authMiddleware } from '@clerk/nextjs';
 // This example protects all routes including api/trpc routes
 // Please edit this to allow other routes to be public as needed.
 // See https://clerk.com/docs/references/nextjs/auth-middleware for more information about configuring your Middleware
+
 export default authMiddleware({
   publicRoutes: ['/'],
 });
