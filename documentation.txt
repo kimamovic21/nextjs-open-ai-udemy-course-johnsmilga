@@ -503,3 +503,13 @@ Section 02: GPTGenius App
 -kreiramo i eksportujemo funkciju authMiddleware()
 -kreiramo i eksportujemo varijablu objekt const config
 -u pretrazivacu otvorimo rutu: http://localhost:3000/chat
+
+62. Custom Auth Pages
+-u folderu app kreiramo foldere sign-up, [[...sign-up]] i komponentu page.js
+-u komponenti page.js kreiramo i eksportujemo funkciju SignUpPage()
+-u komponentu page.js importujemo komponentu SignUp iz paketa Clerk
+-u folderu app kreiramo foldere sign-in, [[...sign-in]] i komponentu page.js
+-u komponenti page.js kreiramo i eksportujemo funkciju SignInPage()
+-u komponentu page.js importujemo komponentu SignIn iz paketa Clerk
+-u .env.local fajlu kreiramo nove cetiri env varijable
+-u komponente page.js za kreiranje racuna i prijavu kreiramo div element sa Tailwind CSS klasama
