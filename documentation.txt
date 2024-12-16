@@ -516,3 +516,9 @@ Section 02: GPTGenius App
 
 63. React Icons
 -otvorimo web stranicu: https://react-icons.github.io/react-icons/
+
+64. Dashboard Layout
+-otvorimo link: https://daisyui.com/components/drawer/
+-u folderu components kreiramo komponentu Sidebar.jsx
+-u komponentu (dashboard)/layout.js importujemo komponentu Sidebar.jsx
+-u jsx-u kreiramo HTML elemente sa Daisy UI klasama
