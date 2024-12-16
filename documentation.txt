@@ -475,3 +475,9 @@ Section 02: GPTGenius App
 
 57. New App
 -preuzmemo starter folder gptgenius
+
+58. First Pages
+-u folderu app kreiramo folder (dashboard)
+-u folderu (dashboard) kreiramo komponentu layout.js
+-u folderu (dashboard) kreiramo foldere chat, profile i tours
+-u folderima chat, profile i tours kreiramo komponente page.js
