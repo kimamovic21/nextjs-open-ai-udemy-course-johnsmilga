@@ -522,3 +522,8 @@ Section 02: GPTGenius App
 -u folderu components kreiramo komponentu Sidebar.jsx
 -u komponentu (dashboard)/layout.js importujemo komponentu Sidebar.jsx
 -u jsx-u kreiramo HTML elemente sa Daisy UI klasama
+
+65. Sidebar
+-u folderu components kreiramo tri jsx komponente SidebarHeader, NavLinks i MemberProfile
+-u komponentu Sidebar.jsx importujemo kreirane komponente
+-roditelj div elementu dodajemo Tailwind CSS klase
