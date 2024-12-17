@@ -576,3 +576,5 @@ Section 02: GPTGenius App
 -u funkciji toggleTheme() kreiramo varijablu const newTheme
 -dodajemo metodu document.documentElement.setAttribute()
 -dodajemo funkciju setTheme(newTheme)
+
+70. Boilerplate Overview
