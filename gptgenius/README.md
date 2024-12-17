@@ -285,7 +285,8 @@ export default SidebarHeader;
 
 2. **Define Navigation Links:**
 
-   - Create an array named `links` that contains objects representing navigation links. Each object should have a `href` property specifying the link's destination and a `label` property for the link's text label.
+   - Create an array named `links` that contains objects representing navigation links. Each object should have a `href` 
+     property specifying the link's destination and a `label` property for the link's text label.
 
 3. **Create the NavLinks Component:**
 
@@ -301,7 +302,8 @@ export default SidebarHeader;
 
    - Display the link's label (`link.label`) as the text content of the `Link` component.
 
-This component is responsible for rendering navigation links based on the `links` array. It uses the `next/link` package to create client-side navigation links in a Next.js application. The navigation links are generated dynamically based on the `links` array.
+This component is responsible for rendering navigation links based on the `links` array. It uses the `next/link` package to create 
+client-side navigation links in a Next.js application. The navigation links are generated dynamically based on the `links` array.
 
 ## Solution - NavLinks
 

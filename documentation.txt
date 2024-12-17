@@ -536,3 +536,11 @@ Section 02: GPTGenius App
 -u jsx-u roditelj div elementu dodajemo Tailwind CSS klase
 -kreiramo h2 element sa Tailwind CSS klasama
 -u div element dodajemo komponentu ThemeToggle
+
+67. Nav Links
+-u komponentu NavLinks.jsx importujemo komponentu Link iz paketa Next Link
+-kreiramo niz links sa objekt rutama
+-u jsx-u kreiramo ul element sa DaisyUI klasama
+-u ul elementu dodajemo metodu links?.map()
+-u funkciji map kreiramo li element sa prop key
+-u element li dodajemo komponentu Link sa prop href i className
