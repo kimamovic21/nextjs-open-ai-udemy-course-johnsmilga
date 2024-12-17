@@ -527,3 +527,12 @@ Section 02: GPTGenius App
 -u folderu components kreiramo tri jsx komponente SidebarHeader, NavLinks i MemberProfile
 -u komponentu Sidebar.jsx importujemo kreirane komponente
 -roditelj div elementu dodajemo Tailwind CSS klase
+
+66. Sidebar Header
+-u folderu components kreiramo komponentu ThemeToggle.jsx
+-u komponenti ThemeToggle.jsx, u jsx-u kreiramo btn element sa DaisyUI klasama
+-u komponentu SidebarHeader.jsx importujemo komponentu ThemeToggle.jsx
+-importujemo React ikonicu SiOpenaigym
+-u jsx-u roditelj div elementu dodajemo Tailwind CSS klase
+-kreiramo h2 element sa Tailwind CSS klasama
+-u div element dodajemo komponentu ThemeToggle
