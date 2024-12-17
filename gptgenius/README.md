@@ -402,7 +402,8 @@ export default MemberProfile;
 4. **Toggle Theme Function:**
 
    - Define a function named `toggleTheme` to handle theme toggling.
-   - Inside the function, check the current theme (`theme`) and switch it to the opposite theme (`themes.dracula` if it's 'winter', or `themes.winter` if it's 'dracula').
+   - Inside the function, check the current theme (`theme`) and switch it to the opposite theme (`themes.dracula` if it's 'winter', 
+     or `themes.winter` if it's 'dracula').
    - Update the document's root element (`document.documentElement`) with the new theme by setting the 'data-theme' attribute.
 
 5. **Button Rendering:**
@@ -415,7 +416,8 @@ export default MemberProfile;
    - If the theme is 'winter', render a moon icon (e.g., `<BsMoonFill />`).
    - If the theme is 'dracula', render a sun icon (e.g., `<BsSunFill />`).
 
-This component allows users to toggle between two themes (e.g., light and dark) by clicking the button, which updates the `data-theme` attribute on the document's root element and changes the displayed icon accordingly.
+This component allows users to toggle between two themes (e.g., light and dark) by clicking the button, which updates 
+the `data-theme` attribute on the document's root element and changes the displayed icon accordingly.
 
 ## Solution - ThemeToggle
 

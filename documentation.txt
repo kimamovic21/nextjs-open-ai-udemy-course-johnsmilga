@@ -371,7 +371,7 @@ Quiz 1: Fundamentals Quiz
 
 44. Providers
 -otvorimo link: https://www.npmjs.com/package/react-hot-toast
--u terminlu instaliramo paket React Hot Toast sa komandom npm i react-hot-toast
+-u terminalu instaliramo paket React Hot Toast sa komandom npm i react-hot-toast
 -u folderu app kreiramo providers.js fajl
 -u providers.js fajlu kreiramo i eksportujemo funkciju Providers() kao default
 -funkciji Providers() dodajemo parametar destruktuirani prop children
@@ -558,3 +558,21 @@ Section 02: GPTGenius App
 -vrijednost funkcije await currentUser() pohranjujemo u varijablu const user
 -vrijednost funkcije auth() pohranjujemo u destruktuiranu varijablu const { userId }
 -u div elementu kreiramo p element u kojem dinamicki prikazujemo korisnikovu e-mail adresu
+
+69. Theme Toggle
+-otvorimo link: https://daisyui.com/docs/themes/
+-u tailwind.config.js fajl dodajemo objekt daisyui
+-u komponentu app/layout.js, html elementu dodajemo atribut data-theme
+-u komponentu ThemeToggle.jsx dodajemo direktivu 'use client'
+-importujemo Ract ikonice BsMoonFill i BsSunFill iz paketa React Icons
+-kreiramo varijablu objekt const themes
+-u funkciji ThemeToggle() kreiramo state varijablu const theme i set funciju setTheme
+-funkciji useState() dodajemo argument themes.winte useState(themes.winter)
+-u jsx-u kreiramo button elementu sa prop onClick i className
+-u button element dodajemo uslov ternarni operator theme === 'winter'
+-prvi dio ternarnog operatora je ikonica BsMoonFill, a drugi dio ternarnog operatora je ikonica BsSunFill
+-kreiramo funkciju toggleTheme
+-u dogadaj onClick proslijedujemo funkciju toggleTheme
+-u funkciji toggleTheme() kreiramo varijablu const newTheme
+-dodajemo metodu document.documentElement.setAttribute()
+-dodajemo funkciju setTheme(newTheme)
