@@ -347,7 +347,8 @@ export default NavLinks;
 
 3. **Fetch Current User:**
 
-   - Inside the component, use the `currentUser()` function to asynchronously fetch the currently authenticated user and store it in the `user` variable.
+   - Inside the component, use the `currentUser()` function to asynchronously fetch the currently authenticated 
+     user and store it in the `user` variable.
 
 4. **Get User ID:**
 
@@ -356,10 +357,12 @@ export default NavLinks;
 5. **Render User Profile:**
 
    - Render a `div` element containing the user's profile information.
-   - Include a `UserButton` component, which provides a button for signing out and redirects to the specified URL (`'/'` in this case) after sign-out.
+   - Include a `UserButton` component, which provides a button for signing out and redirects to the specified 
+     URL (`'/'` in this case) after sign-out.
    - Display the user's email address using `user.emailAddresses[0].emailAddress`.
 
-This component fetches the currently authenticated user and displays their email address along with a sign-out button. It uses the `@clerk/nextjs` library for authentication and user management in a Next.js application.
+This component fetches the currently authenticated user and displays their email address along with a sign-out button. 
+It uses the `@clerk/nextjs` library for authentication and user management in a Next.js application.
 
 ## Solution - MemberProfile
 

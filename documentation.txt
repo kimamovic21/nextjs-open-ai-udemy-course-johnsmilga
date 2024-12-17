@@ -544,3 +544,17 @@ Section 02: GPTGenius App
 -u ul elementu dodajemo metodu links?.map()
 -u funkciji map kreiramo li element sa prop key
 -u element li dodajemo komponentu Link sa prop href i className
+
+68. Member Profile
+-otvorimo link: https://clerk.com/docs/components/user/user-button
+-otvorimo link: https://clerk.com/docs/references/nextjs/current-user
+-otvorimo link: https://clerk.com/docs/references/nextjs/auth
+-u komponentu MemberProfile.jsx importujemo komponentu UserButton iz paketa Clerk Nextjs
+-u jsx-u roditelj div elementu dodajemo Tailwind CSS klase
+-u div element dodajemo komponentu UserButton sa prop afterSignOutUrl
+-importujemo funkcije currentUser i auth iz paketa Clerk Nextjs Server
+-funkciji MemberProfile() dodajemo asinhronost
+-u funkciju MemberProfile() pozivamo funkcije await currentUser() i auth()
+-vrijednost funkcije await currentUser() pohranjujemo u varijablu const user
+-vrijednost funkcije auth() pohranjujemo u destruktuiranu varijablu const { userId }
+-u div elementu kreiramo p element u kojem dinamicki prikazujemo korisnikovu e-mail adresu
