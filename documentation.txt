@@ -620,3 +620,7 @@ Section 02: GPTGenius App
 -button elementu dodajemo prop className i type
 -form elementu dodajemo dogadaj onSubmit i prop className
 -u dogadaj onSubmit proslijedujemo funkciju handleSubmit
+
+74. React Query - Info
+-otvorimo web stranicu: https://tanstack.com/query/v5/docs/framework/react/overview
+-u terminalu instaliramo React Query pakete sa komandom npm i @tanstack/react-query @tanstack/react-query-devtools
