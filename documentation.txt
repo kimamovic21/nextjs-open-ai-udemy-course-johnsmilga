@@ -649,3 +649,6 @@ Section 02: GPTGenius App
 
 76. OpenAI - Pricing
 -otvorimo web stranicu: https://openai.com/pricing
+
+77. OpenAI - Playground
+-otvorimo link: https://platform.openai.com/playground/chat?models=gpt-3.5-turbo
