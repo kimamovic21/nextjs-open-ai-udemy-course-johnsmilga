@@ -646,3 +646,6 @@ Section 02: GPTGenius App
 -vrijednost funkcije useMutation() pohranjujemo u destruktuiranu varijablu const { mutate }
 -u funkciju useMutation() dodajemo objekt i funkciju mutationFn
 -u funkciju handleSubmit() dodajemo funkciju mutate(text) 
+
+76. OpenAI - Pricing
+-otvorimo web stranicu: https://openai.com/pricing
