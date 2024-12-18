@@ -655,3 +655,15 @@ Section 02: GPTGenius App
 
 78. OpenAI - Docs
 -otvorimo link: https://platform.openai.com/docs/overview
+
+79. First Prompt
+-otvorimo link: https://www.npmjs.com/package/openai
+-u .env fajlu kreiramo env varijablu OPENAI_API_KEY
+-u .env.example fajlu kreiramo primjer env varijable koju je potrebno kreirati
+-u actions.js fajlu, importujemo funkciju OpenAI iz paketa OpenAI
+-dodajemo metodu new openAi()
+-vrijednost metode new openAi() pohranjujemo u varijablu const openai
+-u funkciju generateChatResponse() dodajemo metodu await openai.chat.completions.create()
+-vrijednost metode await openai.chat.completions.create() pohranjujemo u varijablu const response
+-u funkciju create() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo opcije messages, model i temperature
