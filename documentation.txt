@@ -584,3 +584,20 @@ Section 02: GPTGenius App
 -u komponentu profile/page.js importujemo komponentu UserProfile iz paketa Clerk Nextjs
 -u folderu profile kreiramo folder [[...rest]]
 -u folder [[...rest]] premjestamo komponentu page.js iz foldera profile
+
+72. React Hot Toast Library
+-otvorimo web stranicu: https://react-hot-toast.com/
+-otvorimo link: https://www.npmjs.com/package/react-hot-toast
+-u terminalu instaliramo paket sa komandom npm i react-hot-toast
+-u folderu app kreiramo komponentu providers.jsx
+-u komponentu providers.jsx dodajemo direktivu 'use client'
+-kreiramo i eksportujemo kao default funkciju Providers()
+-funkciji Providers() dodajemo parametar destruktuirani prop children
+-importujemo komponentu Toaster iz paketa React Hot Toast
+-u jsx-u dodajemo prazan fragment kao roditelj element
+-u prazan fragment dodajemo komponentu Toaster sa prop position
+-ispod komponente Toaster dodajemo prop children
+-u komponentu app/layout.js importujemo komponentu Providers
+-u body element dodajemo komponentu Providers sa otvorenim u zatvorenim tagom
+-u komponentu Providers dodajemo prop children
+-u komponenti MemberProfile.jsx, komponenti UserButton dodajemo prop fallbackRedirectUrl umjesto prop afterSignOutUrl
