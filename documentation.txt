@@ -624,3 +624,25 @@ Section 02: GPTGenius App
 74. React Query - Info
 -otvorimo web stranicu: https://tanstack.com/query/v5/docs/framework/react/overview
 -u terminalu instaliramo React Query pakete sa komandom npm i @tanstack/react-query @tanstack/react-query-devtools
+
+75. React Query - Setup
+-kreiramo fodler utils i actions.js fajl
+-u actions.js fajlu kreiramo i eksportujemo asinhronu funkciju generateChatResponse() sa parametrom chatMessage
+-importujemo funkciju useState iz paketa React
+-u komponentu providers.jsx importujemo funkciju QueryClient, komponente QueryClientProvider i ReactQueryDevtools iz paketa Tanstack
+-pozivamo funkciju useState() i unutar funkcije anonimnu funkciju
+-u anonimnu funkciju dodajemo funkciju new QueryClient()
+-vrijednost funkcije useState pohranjujemo u varijablu const [queryClient]
+-u jsx-u dodajemo komponentu QueryClientProvider sa otvorenim i zatvorenim tagom 
+-komponenti QueryClientProvider dodajemo prop client
+-u prop client proslijedujemo vrijednost varijable queryClient
+-u komponentu QueryClientProvider dodajemo komponentu ReactQueryDevtools
+-u komponentu chat/page.js importujemo funkcije dehydrate, QueryClient i komponentu HydrationBoundary
+-u jsx-u dodajemo komponentu HydrationBoundary kao roditelj element sa otvorenim i zatvorenim tagom
+-komponenti HydrationBoundary dodajemo prop state
+-u prop state proslijedujemo funkciju dehydrate(queryClient)
+-u komponentu Chat importujemo funkcije useMutation i generateChatResponse iz paketa Tanstack
+-u funkciji Chat() pozivamo funkciju useMutation()
+-vrijednost funkcije useMutation() pohranjujemo u destruktuiranu varijablu const { mutate }
+-u funkciju useMutation() dodajemo objekt i funkciju mutationFn
+-u funkciju handleSubmit() dodajemo funkciju mutate(text) 

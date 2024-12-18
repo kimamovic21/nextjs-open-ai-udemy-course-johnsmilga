@@ -766,6 +766,10 @@ const Chat = () => {
     e.preventDefault();
     mutate(text);
   };
+
+  return (
+    // Rest of the code...
+  );
 };
 ```
 
