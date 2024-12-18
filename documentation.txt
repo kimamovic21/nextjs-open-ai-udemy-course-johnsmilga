@@ -652,3 +652,6 @@ Section 02: GPTGenius App
 
 77. OpenAI - Playground
 -otvorimo link: https://platform.openai.com/playground/chat?models=gpt-3.5-turbo
+
+78. OpenAI - Docs
+-otvorimo link: https://platform.openai.com/docs/overview
