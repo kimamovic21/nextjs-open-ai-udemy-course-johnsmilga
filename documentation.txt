@@ -578,3 +578,9 @@ Section 02: GPTGenius App
 -dodajemo funkciju setTheme(newTheme)
 
 70. Boilerplate Overview
+
+71. User Profile
+-otvorimo link: https://stackoverflow.com/questions/78529760/nextjs-clerk-the-signin-component-is-not-configured-correctly
+-u komponentu profile/page.js importujemo komponentu UserProfile iz paketa Clerk Nextjs
+-u folderu profile kreiramo folder [[...rest]]
+-u folder [[...rest]] premjestamo komponentu page.js iz foldera profile

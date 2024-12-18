@@ -475,7 +475,9 @@ export default ThemeToggle;
 
    - Within the component's render function, return the `UserProfile` component.
 
-This component serves as a page for displaying the user's profile information. It utilizes the `UserProfile` component from the `'@clerk/nextjs'` package to render the user's profile details. This is a common pattern in Next.js applications for handling user authentication and profile management.
+This component serves as a page for displaying the user's profile information. It utilizes the `UserProfile` component from 
+the `'@clerk/nextjs'` package to render the user's profile details. This is a common pattern in Next.js applications for 
+handling user authentication and profile management.
 
 ## Solution - Profile Page
 
