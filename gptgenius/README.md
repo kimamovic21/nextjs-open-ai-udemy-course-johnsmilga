@@ -532,7 +532,8 @@ app/layout.js
 
 3. **Handle Form Submission:**
 
-   - Implement a `handleSubmit` function to handle form submissions when sending messages. It should prevent the default form behavior.
+   - Implement a `handleSubmit` function to handle form submissions when sending messages. 
+     It should prevent the default form behavior.
 
 4. **Render UI Elements:**
 
@@ -543,7 +544,9 @@ app/layout.js
        - An `<input>` element for entering messages, with event handling to update the `text` state.
        - A 'Send' button to submit messages.
 
-This component represents a chat interface where users can send messages. It uses React state to manage the input text and a list of messages. When a message is submitted, it prevents the default form behavior (form submission) and handles message composition.
+This component represents a chat interface where users can send messages. It uses React state to manage the input 
+text and a list of messages. When a message is submitted, it prevents the default form behavior (form submission) 
+and handles message composition.
 
 ## Solution - Chat Structure
 

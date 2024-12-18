@@ -601,3 +601,22 @@ Section 02: GPTGenius App
 -u body element dodajemo komponentu Providers sa otvorenim u zatvorenim tagom
 -u komponentu Providers dodajemo prop children
 -u komponenti MemberProfile.jsx, komponenti UserButton dodajemo prop fallbackRedirectUrl umjesto prop afterSignOutUrl
+
+73. Chat Structure
+-u folderu components kreiramo komponentu Chat.jsx
+-u komponentu chat/page.js importujemo komponentu Chat.jsx
+-u komponentu Chat.jsx dodajemo direktivu 'use client'
+-importujemo funkciju useState() iz paketa React
+-kreiramo state varijable const text i const message
+-kreiramo set funkcije setText i setMessage
+-kreiramo funkciju handleSubmit() sa parametar e
+-u funkciju handleSubmit() dodajemo metodu e.preventDefault()
+-u jsx-u roditelj div elementu dodajemo Tailwind CSS klase
+-u roditelj div elementu kreiramo div element i unutar njega h2 element
+-u roditelj div elementu kreiramo form element sa prop onSubmit i className
+-u form elementu kreiramo div element sa DaisyUI klasama
+-u div elementu kreiramo elemente input i button sa DaisyUI klasama
+-input elementu dodajemo prop type, placeholder, className, value, required i onChange
+-button elementu dodajemo prop className i type
+-form elementu dodajemo dogadaj onSubmit i prop className
+-u dogadaj onSubmit proslijedujemo funkciju handleSubmit
