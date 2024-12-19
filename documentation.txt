@@ -778,3 +778,12 @@ Section 02: GPTGenius App
 -u funkciju map() dodajemo izjavu return
 -u izjavi return kreiramo li element sa prop key i className
 -u li elementu kreiramo p element sa prop className  
+
+88. PlanetScale
+-otvorimo web stranicu: https://planetscale.com/
+-u terminalu instaliramo pakete Prisma i Prisma Client
+-u terminalu ukucamo komandu npx prisma init
+-generisemo .env fajl sa env varijablom DATABASE_URL
+-otvorimo link: https://www.prisma.io/docs/orm/overview/databases/sqlite
+-kreiramo .env.example fajl u koji dodajemo primjer varijable koju je potrebno kreirati
+-u folderu utils kreiramo db.ts fajl
