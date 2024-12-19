@@ -770,3 +770,11 @@ Section 02: GPTGenius App
 -u komponenti TourInfo.jsx, funkciji TourInfo() dodajemo parametar destruktuirani prop tour
 -otvorimo rutu: http://localhost:3000/tours/new-tour
 -unesemo podatke za grad, drzavu i kliknemo dugme za generisanje ture
+
+87. Tour Info
+-u komponenti TourInfo.jsx, destruktuiramo varijable const { title, description, stops } iz prop tour
+-u jsx-u kreiramo HTML elemente h1, p, ul i li sa Tailwind CSS klasama
+-u ul element dodajemo metodu stops?.map()
+-u funkciju map() dodajemo izjavu return
+-u izjavi return kreiramo li element sa prop key i className
+-u li elementu kreiramo p element sa prop className  
