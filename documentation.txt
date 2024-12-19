@@ -715,3 +715,20 @@ Section 02: GPTGenius App
 -u folderu components kreiramo komponentu NewTour.jsx
 -u komponentu new-tour/page.js importujemo komponentu NewTour.jsx
 -ujsx-u, u komponentu HydrationBoundary dodajemo komponentu NewTour
+
+83. New Tour - Form
+-u folderu components kreiramo komponentu TourInfo.jsx
+-u komponentu NewTour.jsx importujemo komponentu TourInfo.jsx
+-dodajemo direktivu 'use client'
+-kreiramo funkciju handleSubmit() sa parametrom e
+-u funkciju handleSubmit() dodajemo metodu e.preventDefault()
+-kreiramo varijable const formData i const destination
+-u jsx-u dodajemo roditelj element prazan fragment
+-u praznom fragmentu kreiramo form element i div element
+-u form elementu kreiramo elemente h2, div, input i button
+-input elementima dodajemo prop type, className, placeholder, name i required
+-HTML elementima dodajemo DaisyUI klase
+-button elementu dodajemo prop submit
+-form elementu dodajemo dogadaj onSubmit i prop className
+-u prop onSubmit proslijedujemo funkciju handleSubmit
+-u div element dodajemo komponentu TourInfo
