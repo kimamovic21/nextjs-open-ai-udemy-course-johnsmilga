@@ -702,3 +702,16 @@ Section 02: GPTGenius App
 -u prop className dodajemo dinamicku klasu bcg
 -u div elementu kreiramo elemente span i p
 -u div element dodajemo ternarni uslov isPending ?
+
+82. New Tour - Setup
+-u folderu tours kreiramo folder new-tour i komponentu page.js
+-u komponenti new-tour/page.js kreiramo i eksportujemo funkciju NewTourPage()
+-funkciji NewTourPage() dodajemo asinhronost
+-u komponentu new-tour/page.js importujemo funkcije dehydrate, QueryClient i komponentu HydrationBoundary iz paketa Tanstack
+-kreiramo varijablu const queryClient
+-u jsx-u dodajemo komponentu HydrationBoundary sa otvorenim i zatvorenim tagom
+-komponenti HydrationBoundary dodajemo prop state
+-u prop state proslijedujemo funkciju dehydrate(queryClient)
+-u folderu components kreiramo komponentu NewTour.jsx
+-u komponentu new-tour/page.js importujemo komponentu NewTour.jsx
+-ujsx-u, u komponentu HydrationBoundary dodajemo komponentu NewTour

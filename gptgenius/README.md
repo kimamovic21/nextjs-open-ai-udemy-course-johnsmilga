@@ -913,20 +913,33 @@ return (
 tours/new-tour/page.js
 
 ```js
-import NewTour from '@/components/NewTour';
-import {
-  dehydrate,
-  HydrationBoundary,
-  QueryClient,
+import { 
+  dehydrate, 
+  HydrationBoundary, 
+  QueryClient 
 } from '@tanstack/react-query';
-export default async function ChatPage() {
+import NewTour from '@/components/NewTour';
+
+const NewTourPage = async () => {
   const queryClient = new QueryClient();
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
       <NewTour />
     </HydrationBoundary>
   );
-}
+};
+export default NewTourPage;
+```
+
+components/NewTour.jsx
+
+```js
+const NewTour = () => {
+  return (
+    <div>NewTour</div>
+  );
+};
+export default NewTour;
 ```
 
 ```js
