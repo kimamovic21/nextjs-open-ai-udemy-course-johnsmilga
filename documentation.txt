@@ -689,3 +689,16 @@ Section 02: GPTGenius App
 -u funkciju onSuccess() dodajemo funkciju setMessages()
 -u funkciju setMessages() proslijedujemo anonimnu funkciju sa parametrom prev
 -u funkciju onError() dodajemo funkciju toast.error()
+
+81. Display Messages
+-u komponenti Chat.jsx, destruktuiramo varijablu isPending iz funkcije useMutation()
+-u jsx-u button elementu dodajemo prop disabled
+-u prop disabled proslijedujemo vrijednost varijable isPending
+-u button element dodajemo ternarni uslov isPending ?
+-u prvi div element unutar roditelj div elementa dodajemo metodu messages?.map()
+-u funkciji map() kreiramo dvije varijable const avatar i const bcg
+-dodajemo izjavu return
+-u izjavi return kreiramo div element sa prop key i className
+-u prop className dodajemo dinamicku klasu bcg
+-u div elementu kreiramo elemente span i p
+-u div element dodajemo ternarni uslov isPending ?
