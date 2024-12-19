@@ -732,3 +732,24 @@ Section 02: GPTGenius App
 -form elementu dodajemo dogadaj onSubmit i prop className
 -u prop onSubmit proslijedujemo funkciju handleSubmit
 -u div element dodajemo komponentu TourInfo
+
+84. New Tour - React Query
+-u utils/actions.js fajlu kreiramo i eksportujemo asinhrone funkcije getExistingTour(), generateTourResponse() i createNewTour()
+-u komponentu NewTour.jsx importujemo funkcije useMutation i useQueryClient iz paketa Tanstack
+-importujemo funkcije createNewTour, generateTourResponse i getExistingTour iz actions.js fajla
+-u funkciji NewTour() pozivamo funkciju useMutation()
+-vrijednost funkcije useMutation() pohranjujemo u destruktuirane varijable const { mutate, isPending, data: tour }
+-u funkciju useMutation() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo key - value par mutationFn i anonimnu asinhronu funkciju sa parametrom destination
+-u anonimnu funkciju dodajemo metodu await generateTourResponse()
+-vrijednost metode await generateTourResponse() pohranjujemo u varijablu const newTour
+-dodajemo uslov if (newTour)
+-u uslov if (newTour) dodajemo izjavu return newTour
+-dodajemo funkciju toast.error()
+-dodajemo izjavu return null
+-u funkciju handleSubmit() dodajemo funkciju mutate(destination)
+-dodajemo uslov if (isPending)
+-u uslovu if (isPending) kreiramo span element sa DaisyUI klasama
+-nakon form elementa, u div elementu kreiramo div element 
+-u div element dodajemo ternarni uslov tour ?
+-komponenti Tour dodajemo prop tour
