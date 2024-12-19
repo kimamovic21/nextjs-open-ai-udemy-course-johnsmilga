@@ -667,3 +667,25 @@ Section 02: GPTGenius App
 -vrijednost metode await openai.chat.completions.create() pohranjujemo u varijablu const response
 -u funkciju create() dodajemo konfiguracioni objekt
 -u konfiguracioni objekt dodajemo opcije messages, model i temperature
+
+80. Context
+-u actions.js fajlu, funkciji generateChatResponse() dodajemo parametar chatMessages
+-u izjavu return dodajemo response.choices[0].message
+-dodajemo blokove koda try - catch
+-u blok koda try dodajemo varijablu const response i izjavu return
+-u blok koda catch dodajemo izjavu return null
+-u komponenti Chat.jsx, funkciji mutationFn dodajemo parametar query
+-funkciji generateChatResponse() dodajemo argument niz [...messages, query]
+-u funkciji handleSubmit() kreiramo varijablu const query
+-dodajemo funkciju mutate(query)
+-dodajemo funkciju setMessages()
+-u funkciju setMessages() proslijedujemo anonimnu funkciju sa parametrom prev
+-dodajemo funkciju setText('')
+-u funkciju useMutation() dodajemo funkcije onSuccess i onError
+-importujemo instancu toast iz paketa React Hot Toast
+-funkciji onSuccess() dodajemo parameter data
+-u funkciju onSuccess dodajemo uslov if (!data)
+-u uslov if (!data) dodajemo funkciju toast.error()
+-u funkciju onSuccess() dodajemo funkciju setMessages()
+-u funkciju setMessages() proslijedujemo anonimnu funkciju sa parametrom prev
+-u funkciju onError() dodajemo funkciju toast.error()
