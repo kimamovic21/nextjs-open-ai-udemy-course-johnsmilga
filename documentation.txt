@@ -753,3 +753,5 @@ Section 02: GPTGenius App
 -nakon form elementa, u div elementu kreiramo div element 
 -u div element dodajemo ternarni uslov tour ?
 -komponenti Tour dodajemo prop tour
+
+85. Tour Prompt
