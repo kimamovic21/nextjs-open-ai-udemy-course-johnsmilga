@@ -755,3 +755,18 @@ Section 02: GPTGenius App
 -komponenti Tour dodajemo prop tour
 
 85. Tour Prompt
+
+86. Generate Tour Response
+-u actions.js fajlu, u funkciju generateTourResponse() dodajemo blokove koda try - catch
+-u blok koda try dodajemo metodu openai.chat.completions.create()
+-u funkciju create() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo opcije messages, model i temperature 
+-kreiramo varijablu const query
+-vrijednost metode await openai.chat.completions.create() pohranjujemo u varijablu const response
+-kreiramo varijablu const tourData
+-dodajemo uslov if (!tourData.tour)
+-u uslov if (!tourData.tour) dodajemo izjavu return null
+-u blok koda catch dodajemo izjavu return null
+-u komponenti TourInfo.jsx, funkciji TourInfo() dodajemo parametar destruktuirani prop tour
+-otvorimo rutu: http://localhost:3000/tours/new-tour
+-unesemo podatke za grad, drzavu i kliknemo dugme za generisanje ture
