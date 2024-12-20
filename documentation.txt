@@ -792,3 +792,16 @@ Section 02: GPTGenius App
 -u schema.prisma fajlu kreiramo model Tour
 -u terminalu ukucamo komandu npx prisma migrate dev
 -u terminalu ukucamo komandu npx prisma studio
+
+90. Save Tour
+-u actions.js fajlu importujemo instancu prisma iz folder db
+-u funkciji createNewTour() dodajemo izjavu return prisma.tour.findUnique()
+-u funkciju createNewTour() dodajemo izjavu return prisma.tour.create()
+-u komponenti NewTour.jsx,u funkciji NewTour() pozivamo funkciju useQueryClient()
+-vrijednost funkcije useQueryClient() pohranjujemo u varijablu const queryClient
+-u kljucu mutationFn, u anonimnu funkciju dodajemo funkciju await getExistingTour(destination)
+-vrijednost metode await getExistingTour(destination) pohranjujemo u varijablu const existingTour
+-dodajemo uslov if (existingTour)
+-u uslov if (newTour) dodajemo funkciju await createNewTour(newTour)
+-dodajemo metodu queryClient.invalidateQueries()
+-dodajemo izjavu return newTour

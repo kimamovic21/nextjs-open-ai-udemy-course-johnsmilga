@@ -1,5 +1,6 @@
 'use server';
 
+import prisma from '@/utils/db';
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
@@ -22,10 +23,6 @@ export const generateChatResponse = async (chatMessages) => {
   } catch (error) {
     return null;
   };
-};
-
-export const getExistingTour = async ({ city, country }) => {
-  return null;
 };
 
 export const generateTourResponse = async ({ city, country }) => {
@@ -69,6 +66,22 @@ export const generateTourResponse = async ({ city, country }) => {
   };
 };
 
+export const getExistingTour = async ({ city, country }) => {
+  city = city.charAt(0).toUpperCase() + city.slice(1);
+  country = country.charAt(0).toUpperCase() + country.slice(1);
+
+  return prisma.tour.findUnique({
+    where: {
+      city_country: {
+        city,
+        country,
+      },
+    },
+  });
+};
+
 export const createNewTour = async (tour) => {
-  return null;
+  return prisma.tour.create({
+    data: tour,
+  });
 };
