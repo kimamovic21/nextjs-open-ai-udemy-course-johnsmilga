@@ -829,3 +829,20 @@ Save Tour - fixed
 -u konfiguracioni objekt findMany() dodajemo objekte where i orderBy
 -u objekt where dodajemo niz OR
 -dodajemo izjavu return tours
+
+93. Tours Page - Setup
+-u folderu components kreiramo tri jsx komponente: ToursPage, ToursList i TourCard
+-u folderu app/tours kreiramo komponentu loading.js
+-u komponentu tours/page.js importujemo funkcije dehydrate, QueryClient i komponentu HydrationBoundary iz paketa Tanstack
+-importujemo funkciju getAllTours iz foldera utils
+-importujemo komponentu ToursPage.jsx
+-preimenujemo funkciju ToursPage() u AllToursPage()
+-funkciji AllToursPage() dodajemo asinhronost
+-u funkciji AllToursPage() kreiramo varijablu const queryClient
+-dodajemo metodu queryClient.prefetchQuery()
+-funkciji prefetchQuery() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo kljuceve queryKey i queryFn
+-u jsx-u dodajemo komponentu HydrationBoundary kao roditelj element
+-komponente HydrationBoundary dodajemo prop state
+-u prop state proslijedujemo funkciju dehydrate(queryClient)
+-u komponentu HydrationBoundary dodajemo komponentu ToursPage

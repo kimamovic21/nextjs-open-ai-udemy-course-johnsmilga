@@ -1353,8 +1353,17 @@ export const getAllTours = async (searchTerm) => {
 
 ## All Tours Page
 
-- create ToursPage ToursList and TourCard components
+- create ToursPage, ToursList and TourCard components
 - create loading.js in app/tours
+
+```js
+const loading = () => {
+  return (
+    <span className='loading loading-lg'>loading...</span>
+  );
+};
+export default loading;
+```
 
 ```js
 import ToursPage from '@/components/ToursPage';
