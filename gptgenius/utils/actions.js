@@ -70,7 +70,7 @@ export const getExistingTour = async ({ city, country }) => {
   city = city.charAt(0).toUpperCase() + city.slice(1);
   country = country.charAt(0).toUpperCase() + country.slice(1);
 
-  return prisma.tour.findUnique({
+  const tour = await prisma.tour.findUnique({
     where: {
       city_country: {
         city,
@@ -78,10 +78,22 @@ export const getExistingTour = async ({ city, country }) => {
       },
     },
   });
+
+  if (tour) {
+    return {
+      ...tour,
+      stops: JSON.parse(tour.stops), 
+    };
+  };
+
+  return null;
 };
 
 export const createNewTour = async (tour) => {
   return prisma.tour.create({
-    data: tour,
+    data: {
+      ...tour,
+      stops: JSON.stringify(tour.stops), 
+    },
   });
 };

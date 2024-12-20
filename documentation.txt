@@ -805,3 +805,12 @@ Section 02: GPTGenius App
 -u uslov if (newTour) dodajemo funkciju await createNewTour(newTour)
 -dodajemo metodu queryClient.invalidateQueries()
 -dodajemo izjavu return newTour
+
+Save Tour - fixed
+-u actions.js fajlu, u funkciji getExistingTour(), vrijednost metode await prisma.tour.findUnique() pohranjujemo u varijablu const tour
+-dodajemo uslov if (tour)
+-u funkciji createNewTour(), u funkciji create(), dodajemo objekt data
+-u folderu utils kreiramo utils.js fajl
+-u utils.js fajlu kreiramo i eksportujemo funkciju toProperCase(str)
+-u komponentu NewTour.jsx importujemo funkciju toProperCase()
+-u metodu Object.fromEntries() dodajemo metodu Array.from() 

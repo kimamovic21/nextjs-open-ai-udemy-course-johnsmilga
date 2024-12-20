@@ -2,6 +2,7 @@
 
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { createNewTour, generateTourResponse, getExistingTour } from '@/utils/actions';
+import { toProperCase } from '@/utils/utils';
 import toast from 'react-hot-toast';
 import TourInfo from '@/components/TourInfo';
 
@@ -29,7 +30,9 @@ const NewTour = () => {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
-    const destination = Object.fromEntries(formData.entries());
+    const destination = Object.fromEntries(Array.from(formData.entries()).map(
+      ([key, value]) => [key, typeof value === 'string' ? toProperCase(value) : value]
+    ));
 
     mutate(destination);
   };
