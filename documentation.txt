@@ -816,3 +816,16 @@ Save Tour - fixed
 -u metodu Object.fromEntries() dodajemo metodu Array.from() 
 
 91. Timeout Info
+
+92. GetAllTours Function
+-u actions.js fajlu kreiramo i eksportujemo asinhronu funkciju getAllTours() sa parametrom searchTerm
+-u funkciju getAllTours() dodajemo metodu if (!searchTerm)
+-u uslov if (!searchTerm) dodajemo metodu await prisma.tour.findMany()
+-vrijednost metode await prisma.tour.findMany() pohranjujemo u varijablu const tours
+-nakon uslova if dodajemo izjavu return tours
+-dodajemo metodu await prisma.tour.findMany()
+-vrijednost metode await prisma.tour.findMany() pohranjujemo u varijablu const tours
+-u funkciju findMany() dodajemo konfiguracioni objekt findMany()
+-u konfiguracioni objekt findMany() dodajemo objekte where i orderBy
+-u objekt where dodajemo niz OR
+-dodajemo izjavu return tours
