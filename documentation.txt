@@ -787,3 +787,8 @@ Section 02: GPTGenius App
 -otvorimo link: https://www.prisma.io/docs/orm/overview/databases/sqlite
 -kreiramo .env.example fajl u koji dodajemo primjer varijable koju je potrebno kreirati
 -u folderu utils kreiramo db.ts fajl
+
+89. Tour Model
+-u schema.prisma fajlu kreiramo model Tour
+-u terminalu ukucamo komandu npx prisma migrate dev
+-u terminalu ukucamo komandu npx prisma studio
