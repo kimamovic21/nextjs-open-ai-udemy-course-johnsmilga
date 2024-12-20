@@ -814,3 +814,5 @@ Save Tour - fixed
 -u utils.js fajlu kreiramo i eksportujemo funkciju toProperCase(str)
 -u komponentu NewTour.jsx importujemo funkciju toProperCase()
 -u metodu Object.fromEntries() dodajemo metodu Array.from() 
+
+91. Timeout Info
