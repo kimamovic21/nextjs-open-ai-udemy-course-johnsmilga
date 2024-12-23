@@ -1,5 +1,7 @@
 const TourInfo = ({ tour }) => {
   const { title, description, stops } = tour;
+  
+  const parsedStops = typeof stops === 'string' ? JSON.parse(stops) : stops;
 
   return (
     <div className='max-w-2xl'>
@@ -10,7 +12,7 @@ const TourInfo = ({ tour }) => {
         {description}
       </p>
       <ul>
-        {stops?.map((stop) => {
+        {parsedStops?.map((stop) => {
           return (
             <li key={stop} className='mb-4 bg-base-100 p-4 rounded-xl'>
               <p className='text'>

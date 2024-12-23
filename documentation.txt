@@ -887,3 +887,21 @@ Save Tour - fixed
 -u kljuc queryKey dodajemo u niz varijablu searchValue
 -u kljuc queryFn dodajemo u funkciju getAllTours varijablu searchValue
 -u komponentu tours/page.js, u kljuc queryKey, u niz dodajemo vrijednost prazan string ''
+
+96. Single Tour Page
+-u folderu tours kreiramo folder id i komponentu page.js
+-u folderu tours/[id]/page.js kreiramo i eksportujemo kao default funkciju SingleTourPage
+-u actions.js fajlu kreiramo i eksportujemo asinhronu funkciju getSingleTour() sa paratrom id
+-dodajemo izjavu return prisma.tour.findUnique()
+-u funkciju findUnique() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekt where
+-u komponentu [id]/page.js importujemo funkcije redirect i getSingleTour
+-importujemo komponente Link i TourInfo.jsx
+-u funkciju SingleTourPage() dodajemo funkciju await getSingleTour(params.id)
+-vrijednost funkcije await getSingleTour(params.id) pohranjujemo u varijablu const tour
+-dodajemo uslov if (!tour)
+-u uslov if (!tour) dodajemo funkciju redirect('/tours')
+-u jsx-u u roditelj div element dodajemo komponente Link i TourInfo
+-komponenti Link dodajemo prop href i className
+-komponenti TourInfo dodajemo prop tour
+-u komponenti TourInfo.jsx kreiramo varijablu const parsedStops
