@@ -905,3 +905,20 @@ Save Tour - fixed
 -komponenti Link dodajemo prop href i className
 -komponenti TourInfo dodajemo prop tour
 -u komponenti TourInfo.jsx kreiramo varijablu const parsedStops
+
+97. Generate Image
+-u actions.js fajlu kreiramo i eksportujemo asinhronu funkciju generateTourImage() 
+-funkciji generateTourImage() dodajemo parametre destruktuirane prop city i country
+-dodajemo blokove koda try - catch
+-u blok koda try dodajemo metodu await openai.images.generate()
+-vrijednost metode await openai.images.generate() pohranjujemo u varijablu const tourImage
+-dodajemo izjavu return tourImage?.data[0]?.url
+-u blok koda catch dodajemo izjavu return null
+-u komponentu tours/[id]/page.js importujemo funkciju generateTourImage i komponentu Image
+-u funkciji SingleTourPage() dodajemo metodu await generateTourImage()
+-vrijednost metode await generateTourImage() pohranjujemo u varijablu const tourImage
+-u jsx-u dodajemo uslov ternarni operator tourImage ?
+-u prvi dio ternarnog operatora kreiramo div element sa komponentom Image
+-komponenti Image dodajemo vise prop
+-u drugi dio ternarnog operatora dodajemo vrijednost null
+-u next.config.js fajl, u niz remotePatterns dodajemo dva objekta
