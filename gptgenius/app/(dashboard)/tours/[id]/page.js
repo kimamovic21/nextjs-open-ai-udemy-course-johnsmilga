@@ -1,19 +1,20 @@
-import { redirect } from 'next/navigation';
-import { generateTourImage, getSingleTour } from '@/utils/actions';
+import prisma from '@/utils/db';
+import axios from 'axios';
 import Link from 'next/link';
 import Image from 'next/image';
 import TourInfo from '@/components/TourInfo';
 
-const SingleTourPage = async ({ params }) => {
-  const tour = await getSingleTour(params.id);
-  if (!tour) {
-    redirect('/tours');
-  };
+const url = `https://api.unsplash.com/search/photos?client_id=${process.env.UNSPLASH_API_KEY}&query=`;
 
-  const tourImage = await generateTourImage({
-    city: tour.city,
-    country: tour.country,
+const SingleTourPage = async ({ params }) => {
+  const tour = await prisma.tour.findUnique({
+    where: {
+      id: params.id,
+    },
   });
+
+  const { data } = await axios(`${url}${tour.city}`);
+  const tourImage = data?.results[0]?.urls?.raw;
 
   return (
     <div>

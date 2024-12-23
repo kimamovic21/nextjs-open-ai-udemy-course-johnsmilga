@@ -1654,12 +1654,12 @@ UNSPLASH_API_KEY=7pmB29Xi9rOWHhYpvtuc4edchzh1w0eawUjJwNAqngA
 ```
 
 ```js
-import TourInfo from '@/components/TourInfo';
-import { generateTourImage } from '@/utils/actions';
-import prisma from '@/utils/prisma';
+import prisma from '@/utils/db';
+import axios from 'axios';
 import Link from 'next/link';
 import Image from 'next/image';
-import axios from 'axios';
+import TourInfo from '@/components/TourInfo';
+
 const url = `https://api.unsplash.com/search/photos?client_id=${process.env.UNSPLASH_API_KEY}&query=`;
 
 const SingleTourPage = async ({ params }) => {
@@ -1671,11 +1671,7 @@ const SingleTourPage = async ({ params }) => {
 
   const { data } = await axios(`${url}${tour.city}`);
   const tourImage = data?.results[0]?.urls?.raw;
-
-  // const tourImage = await generateTourImage({
-  //   city: tour.city,
-  //   country: tour.country,
-  // });
+  
   return (
     <div>
       <Link href='/tours' className='btn btn-secondary mb-12'>
@@ -1701,6 +1697,34 @@ const SingleTourPage = async ({ params }) => {
 };
 export default SingleTourPage;
 ```
+
+
+```js
+// Alternative
+
+// Fetch Unsplash image as we want to manage the cost of OpenAI API usage
+const { data } = await axios.get(`${url}${tour.city}`);
+const unsplashImage = data?.results[0]?.urls?.raw;
+
+if (unsplashImage) {
+  console.log(`Using Unsplash image: ${unsplashImage}`);
+} else {
+  console.log(`No Unsplash image found, generating OpenAI image.`);
+};
+
+// If no Unsplash image, fetch OpenAI generated image to keep the cost down
+const tourImage =
+  unsplashImage ||
+  (await generateTourImage({
+    city: tour.city,
+    country: tour.country,
+  }));
+
+if (!unsplashImage) {
+  console.log(`Using OpenAI generated image: ${tourImage}`);
+};
+```
+
 
 ## Remove SingIn and SignUp Pages
 

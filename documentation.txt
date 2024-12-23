@@ -922,3 +922,12 @@ Save Tour - fixed
 -komponenti Image dodajemo vise prop
 -u drugi dio ternarnog operatora dodajemo vrijednost null
 -u next.config.js fajl, u niz remotePatterns dodajemo dva objekta
+
+98. Unsplash API
+-u .env.local fajlu kreiramo env varijablu UNSPLASH_API_KEY
+-u .env.local.example fajlu dodajemo primjer varijable koju je potrebno kreirati
+-u komponentu tours/[id]/page.js importujemo instancu axios iz paketa Axios
+-kreiramo varijablu const url
+-pozivamo funkciju await axios()
+-vrijednost funkcije await axios() pohranjujemo u destruktuiranu varijablu const { data }
+-kreiramo varijablu const tourImage
