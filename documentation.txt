@@ -868,3 +868,22 @@ Save Tour - fixed
 -komponenti Link dodajemo prop href i className
 -u komponenti Link kreiramo elemente div i h2
 -komponenti Link i HTML elementima dodajemo DaisyUI klase
+
+95. Search Functionality
+-u komponenti ToursPage.jsx, u jsx-u kreiramo form element kao roditelj element
+-u form elementu kreiramo div element
+-u div elementu kreiramo elemente input i button
+-input elementima dodajemo prop type, placeholder, className, name, value, onChange i required
+-importujemo funkciju useState iz paketa React
+-kreiramo state varijablu const searchValue i set funkciju setSearchValue
+-u prop value proslijedujemo varijablu searchValue
+-u dogadaj onChange proslijedujemo anonimnu funkciju sa parametrom e
+-u anonimnu funkciju proslijedujemo funkciju setSearchValue(e.target.value)
+-button elementu dodajemo prop className, type, disabled i onClick
+-u prop disabled proslijedujemo varijablu isPending
+-u dogadaj onClick proslijedujemo anonimnu funkciju
+-u anonimnu funkciju proslijedujemo funkciju setSearchValue
+-u button element dodajemo ternarni uslov isPending ?
+-u kljuc queryKey dodajemo u niz varijablu searchValue
+-u kljuc queryFn dodajemo u funkciju getAllTours varijablu searchValue
+-u komponentu tours/page.js, u kljuc queryKey, u niz dodajemo vrijednost prazan string ''
