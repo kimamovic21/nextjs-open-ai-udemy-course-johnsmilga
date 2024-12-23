@@ -931,3 +931,7 @@ Save Tour - fixed
 -pozivamo funkciju await axios()
 -vrijednost funkcije await axios() pohranjujemo u destruktuiranu varijablu const { data }
 -kreiramo varijablu const tourImage
+
+99. Custom Pages - Bug/Fix
+-u folderu app obrisemo foldere sign-in i sign-up
+-u .env.local fajlu izbrisemo cetiri env varijable
