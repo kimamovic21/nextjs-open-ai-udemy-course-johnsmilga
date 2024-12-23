@@ -846,3 +846,25 @@ Save Tour - fixed
 -komponente HydrationBoundary dodajemo prop state
 -u prop state proslijedujemo funkciju dehydrate(queryClient)
 -u komponentu HydrationBoundary dodajemo komponentu ToursPage
+
+94. Tours List
+-u komponentu ToursPage.jsx dodajemo direktivu 'use client'
+-importujemo funkciju getAllTours iz foldera utils
+-importujemo funkciju useQuery iz paketa Tanstack
+-importujemo komponentu ToursList.jsx
+-u funkciji ToursPage() pozivamo funkciju useQuery()
+-vrijednost funkcije useQuery() pohranjujemo u destruktuirane varijable const { data, isPending }
+-u jsx-u dodajemo prazan fragment kao roditelj element
+-u komponenti ToursList.jsx, funkciji ToursList() dodajemo parametar destruktuirani prop data
+-dodajemo uslov if (data.length === 0)
+-u uslovu if kreiramo h4 element
+-u jsx-u, roditelj div elementu kreiramo Tailwind CSS Grid klase
+-u div element dodajemo metodu data?.map()
+-importujemo komponentu TourCard.jsx
+-u funkciju map() dodajemo komponentu TourCard sa prop key i tour
+-u komponentu TourCard.jsx importujemo komponentu Link iz paketa Next Link
+-destruktuiramo varijable const { city, title, id, country } iz varijable tour
+-u jsx-u dodajemo komponentu Link kao roditelj element
+-komponenti Link dodajemo prop href i className
+-u komponenti Link kreiramo elemente div i h2
+-komponenti Link i HTML elementima dodajemo DaisyUI klase
