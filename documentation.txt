@@ -997,3 +997,23 @@ Save Tour - fixed
 -vrijednost funkcije subtractTokens() pohranjujemo u varijablu const newTokens
 -dodajemo funkciju toast.success()
 -dodajemo izjavu return newTour.tour
+
+105. Chat Logic
+-u actions.js fajlu, u funkciju generateChatResponse() dodajemo izjavu return objekt sa kljucevima message i tokens 
+-u komponentu Chat.jsx importujemo funkciju useAuth() iz paketa Clerk Nextjs
+-u funkciji Chat() pozivamo funkciju useAuth()
+-vrijednost funkcije useAuth() pohranjujemo u destruktuiranu varijablu const { userId }
+-u funkciju useMutation() dodajemo kljuc mutationFn
+-kljucu mutationFn dodjeljujemo vrijednost asinhrone anonimne funkcije sa parametrom query
+-importujemo funkciju fetchUserTokensById iz foldera utils
+-u anonimnoj funkciji() pozivamo funkciju await fetchUserTokensById(userId)
+-vrijednost funkcije fetchUserTokensById(userId) pohranjujemo u varijablu const currentTokens
+-dodajemo uslov if (currentTokens < 300)
+-u uslov if (currentTokens < 300) dodajemo funkciju toast.error()
+-pozivamo funkciju await generateChatResponse()
+-vrijednost funkcije await generateChatResponse() pohranjujemo u varijablu const response
+-dodajemo uslov if (!response)
+-u uslov if (!response) dodajemo funkciju toast.error()
+-pozivamo funkciju await subtractTokens(userId, response.tokens)
+-vrijednost funkcije await subtractTokens(userId, response.tokens) pohranjujemo u varijablu const newTokens
+-dodajemo funkciju toast.success()

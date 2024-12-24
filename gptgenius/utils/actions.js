@@ -21,8 +21,12 @@ export const generateChatResponse = async (chatMessages) => {
     });
     // console.log(response);
     // console.log(response.choices[0].message);
-    return response.choices[0].message;
+    return {
+      message: response.choices[0].message,
+      tokens: response.usage.total_tokens,
+    };
   } catch (error) {
+    console.error(error);
     return null;
   };
 };
