@@ -967,3 +967,16 @@ Save Tour - fixed
 -importujemo funkciju revalidatePath() iz paketa Next Cache
 -dodajemo funkciju revalidatePath('/profile')
 -dodajemo izjavu return result.tokens
+
+103. Display Tokens
+-u komponentu MemberProfile.jsx importujemo funkciju fetchOrGenerateTokens iz foldera utils
+-u funkciji MemberProfile() pozivamo funkciju await fetchOrGenerateTokens(userId)
+-u komponenti profile/page.js, u jsx-u kreiramo div element kao roditelj element
+-funkciji ProfilePage() dodajemo asinhronost
+-importujemo funkciju fetchUserTokensById iz foldera utils
+-u div elementu kreiramo h2 element sa Tailwind CSS klasama
+-u funkciju ProfilePage() pozivamo funkciju auth()
+-vrijednost funkcije auth() pohranjujemo u destruktuiranu varijablu const { userId }
+-pozivamo funkciju await fetchUserTokensById(userId)
+-vrijednost funkcije await fetchUserTokensById(userId) pohranjujemo u varijablu const currentTokens
+-kreiramo i eksportujemo varijablu const dynamic
