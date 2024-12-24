@@ -1021,3 +1021,5 @@ Save Tour - fixed
 106. Deploy
 -otvorimo web stranicu: https://vercel.com/
 -kreiramo novi projekt
+
+107. Switch to Clerk 5
