@@ -1017,3 +1017,7 @@ Save Tour - fixed
 -pozivamo funkciju await subtractTokens(userId, response.tokens)
 -vrijednost funkcije await subtractTokens(userId, response.tokens) pohranjujemo u varijablu const newTokens
 -dodajemo funkciju toast.success()
+
+106. Deploy
+-otvorimo web stranicu: https://vercel.com/
+-kreiramo novi projekt
