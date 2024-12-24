@@ -941,3 +941,29 @@ Save Tour - fixed
 101. Max Tokens
 -otvorimo web stranicu https://clerk.com/
 -u actions.js fajlu, u funkciji generateChatResponse() dodajemo kljuc max_tokens
+
+102. Token Actions
+-u schema.prisma fajlu kreiramo model Token
+-u terminalu ukucamo komandu npx prisma db push
+-u actions.js fajlu kreiramo i eksportujemo asinhronu funkciju fetchUserTokensById() sa parametrom clerkId
+-u funkciju fetchUserTokensById() dodajemo metodu await prisma.token.findUnique()
+-vrijednost metode await prisma.token.findUnique() pohranjujemo u varijablu const result
+-dodajemo izjavu return result?.tokens
+-kreiramo i eksportujemo asinhronu funkciju generateUserTokensForId() sa parametrom clerkId
+-dodajemo metodu await prisma.token.create()
+-vrijednost metode await prisma.token.create() pohranjujemo u varijablu const result
+-dodajemo izjavu return result?.tokens
+-kreiramo i eksportujemo asinhronu funkciju fetchOrGenerateTokens() sa parametrom clerkId
+-u funkciju fetchOrGenerateTokens() dodajemo metodu await fetchUserTokensById(clerkId)
+-vrijednost metode await fetchUserTokensById(clerkId) pohranjujemo u varijablu const result
+-dodajemo uslov if (result)
+-u uslov if (result) dodajemo izjavu return result.tokens
+-nakon uslova if dodajemo izjavu return (await generateUserTokensForId(clerkId)).tokens
+-kreiramo i eksportujemo asinhronu funkciju subtractTokens() sa parametrima clerkId i tokens
+-u funkciju subtractTokens() dodajemo metodu await prisma.token.update()
+-vrijednost metode await prisma.token.update() pohranjujemo u varijablu const result
+-u funkciju update() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekte where i data
+-importujemo funkciju revalidatePath() iz paketa Next Cache
+-dodajemo funkciju revalidatePath('/profile')
+-dodajemo izjavu return result.tokens
