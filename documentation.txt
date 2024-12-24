@@ -937,3 +937,7 @@ Save Tour - fixed
 -u .env.local fajlu izbrisemo cetiri env varijable
 
 100. Tokens - Intro
+
+101. Max Tokens
+-otvorimo web stranicu https://clerk.com/
+-u actions.js fajlu, u funkciji generateChatResponse() dodajemo kljuc max_tokens
