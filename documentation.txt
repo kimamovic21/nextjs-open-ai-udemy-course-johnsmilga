@@ -980,3 +980,20 @@ Save Tour - fixed
 -pozivamo funkciju await fetchUserTokensById(userId)
 -vrijednost funkcije await fetchUserTokensById(userId) pohranjujemo u varijablu const currentTokens
 -kreiramo i eksportujemo varijablu const dynamic
+
+104. Tours Logic
+-u komponentu NewTour.jsx importujemo funkciju fetchUserTokensById
+-importujemo funkciju useAuth iz paketa Clerk Nextjs
+-u funkciju NewTour() pozivamo funkciju useAuth()
+-vrijednost funkcije useAuth() pohranjujemo u destruktuiranu varijablu const { userId }
+-u funkciji mutationFn pozivamo funkciju await fetchUserTokensById(userId)
+-vrijednost funkcije wait fetchUserTokensById(userId) pohranjujemo u varijablu const currentTokens
+-dodajemo uslov if (currentTokens < 300)
+-dodajemo uslov if (!newTour)
+-u uslov if (!newTour) dodajemo funkcije toast.error()
+-vrijednost funkcije await createNewTour(newTour.tour) pohranjujemo u varijablu const response
+-importujemo funkciju subtractTokens
+-pozivamo funkciju await subtractTokens(userId, newTour.tokens)
+-vrijednost funkcije subtractTokens() pohranjujemo u varijablu const newTokens
+-dodajemo funkciju toast.success()
+-dodajemo izjavu return newTour.tour
