@@ -1084,3 +1084,15 @@ Section 03: Jobify
 -u komponentu links.tsx importujemo tri React ikonice
 -kreiramo tip NavLink
 -kreiramo niz const links sa tipom NavLink
+
+118. Dashboard Layout
+-u folderu components kreiramo tsx komponente: Navbar, Sidebar, LinksDropdown i ThemeToggle 
+-u komponentu (dashboard)/layout.tsx importujemo tip PropsWithChildren iz paketa React
+-importujemo komponente Navbar.tsx i Sidebar.tsx
+-u funkciji layout(), parametru children dodajemo tip PropsWithChildren
+-u jsx-u kreiramo main element sa Tailwind CSS Grid klasama
+-u main elementu kreiramo dva div elementa sa Tailwind CSS Grid klasama
+-u prvi div element dodajemo komponentu Sidebar
+-u drugi div element dodajemo komponentu Navbar
+-u drugom div element kreiramo div element sa Tailwind CSS klasama
+-u div element dodajemo prop children
