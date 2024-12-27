@@ -1096,3 +1096,22 @@ Section 03: Jobify
 -u drugi div element dodajemo komponentu Navbar
 -u drugom div element kreiramo div element sa Tailwind CSS klasama
 -u div element dodajemo prop children
+
+119. Sidebar
+-u komponenti links.tsx, niz links eksportujemo kao default
+-u komponentu Sidebar.tsx dodajemo direktivu 'use client'
+-importujemo funkciju usePathname iz paketa Next Navigation
+-u funkciji Sidebar() pozivamo funkciju usePathname()
+-vrijednost funkcije usePathname() pohranjujemo u varijablu const pathname
+-importujemo komponentu Image i Link iz paketa Next
+-importujemo komponentu Button iz folder ui/button.tsx
+-importujemo sliku Logo i niz links
+-u jsx-u kreiramo aside element kao roditelj element sa Tailwind CSS klasama
+-u aside element dodajemo komponentu Image sa prop src, alt i className
+-kreiramo div element sa Tailwind CSS klasama
+-u div element dodajemo metodu links?.map()
+-u funkciji map(), u izjavi return dodajemo komponentu Button kao roditelj element
+-komponenti Button dodajemo prop asChild, key i variant
+-u komponentu Button dodajemo komponentu Link sa prop href i className
+-u komponenti Link kreiramo dva span elementa sa Tailwind CSS klasama
+-u prop variant dodajemo uslov ternarni operator pathname === link.href ?
