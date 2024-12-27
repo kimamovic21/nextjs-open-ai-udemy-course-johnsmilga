@@ -1043,3 +1043,5 @@ Section 03: Jobify
 -u div element dodajemo dvije komponente Button
 -u drugu komponentu Button dodajemo komponentu Camera
 -komponenti Button dodajemo prop variant i size
+
+112. Shadcn-ui API
