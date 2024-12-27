@@ -1034,3 +1034,12 @@ Section 03: Jobify
 110. Setup
 -preuzmemmo starter folder jobify
 -u terminalu ukucamo komande npm install i npm run dev
+
+111. Shadcn-ui
+-otvorimo web stranicu: https://ui.shadcn.com/
+-otvorimo link: https://lucide.dev/guide/packages/lucide-react
+-u komponentu app/page.tsx importujemo komponente Button i Camera
+-u jsx-u div roditelj elementu dodajemo Tailwind CSS flex klase
+-u div element dodajemo dvije komponente Button
+-u drugu komponentu Button dodajemo komponentu Camera
+-komponenti Button dodajemo prop variant i size
