@@ -1045,3 +1045,16 @@ Section 03: Jobify
 -komponenti Button dodajemo prop variant i size
 
 112. Shadcn-ui API
+
+113. Layout and Homepage
+-otvorimo web stranicu: https://undraw.co/
+-u komponentu app/page.tsx importujemo komponente Image, Link, slike Logo i LandingImg
+-u jsx-u dodajemo element main kao roditelj element
+-u main elementu kreiramo header element sa Tailwind CSS klasama
+-u header element dodajemo komponentu Image sa prop src i alt
+-u main elementu kreiramo section element sa Tailwind CSS Grid klasama
+-u section elementu kreiramo div element 
+-u div elementu kreiramo elemente h1 i p sa Tailwind CSS klasama
+-u div element dodajemo komponentu Button sa prop asChild i className
+-u komponentu Button dodajemo komponentu Link sa prop href
+-u section element dodajemo komponentu Image sa prop src, alt i className
