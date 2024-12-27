@@ -1067,3 +1067,14 @@ Section 03: Jobify
 
 115. Important Update !!!
 -Clerk package update
+
+116. Clerk Auth
+-otvorimo web stranicu: https://clerk.com/
+-na web stranici Clerk kreiramo novi projekt
+-kreiramo fajlove .env.local i .env.local.example
+-u .env.local fajl dodajemo dvije CLERK env varijable
+-u .env.local.example fajl dodajemo primjer varijable koje je potrebno kreirati
+-u komponentu layout.tsx importujemo komponentu ClerkProvider
+-u jsx-u dodajemo komponentu ClerkProvider sa otvorenim i zatvorenim tagom
+-kreiramo komponentu middleware.tsx
+-u komponentu middleware.tsx importujemo funkciju authMiddleware iz paketa Next Clerk Next.js
