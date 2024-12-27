@@ -1023,3 +1023,8 @@ Save Tour - fixed
 -kreiramo novi projekt
 
 107. Switch to Clerk 5
+
+
+Section 03: Jobify
+
+108. Important Info !!!
