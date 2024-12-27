@@ -469,11 +469,14 @@ export default Navbar;
 5. **Inside the `DropdownLinks` component, return the JSX:**
 
    - The main wrapper is the `DropdownMenu` component.
-   - Inside `DropdownMenu`, there is a `DropdownMenuTrigger` component that triggers the dropdown menu. It has a `Button` component with an `AlignLeft` icon. This button is hidden on large screens.
-   - The `DropdownMenuContent` component contains the dropdown menu items. Each item is a `DropdownMenuItem` component that wraps a `Link` component. The `Link` component navigates to the link's `href` when clicked.
+   - Inside `DropdownMenu`, there is a `DropdownMenuTrigger` component that triggers the dropdown menu. 
+     It has a `Button` component with an `AlignLeft` icon. This button is hidden on large screens.
+   - The `DropdownMenuContent` component contains the dropdown menu items. Each item is a `DropdownMenuItem` 
+     component that wraps a `Link` component. The `Link` component navigates to the link's `href` when clicked.
 
 6. **Export the `DropdownLinks` component:**
-   - The `DropdownLinks` component is exported as the default export of the module. This allows it to be imported in other files using the file path.
+   - The `DropdownLinks` component is exported as the default export of the module. This allows it to be imported 
+     in other files using the file path.
 
 ## LinksDropdown
 

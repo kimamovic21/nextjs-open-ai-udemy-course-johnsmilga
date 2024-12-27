@@ -1125,3 +1125,26 @@ Section 03: Jobify
 -u drugi div element dodajemo komponente ThemeToggle i UserButton
 -drugom div elementu dodajemo Tailwind CSS Flex klase
 -komponenti UserButton dodajemo prop afterSignOutUrl
+
+121. Dropdown Links
+-otvorimo link: https://ui.shadcn.com/docs/components/dropdown-menu
+-u terminalu ukucamo komandu: npx shadcn@latest add dropdown-menu
+-u komponentu LinksDropdown.tsx importujemo komponente DropdownMenu, DropdownMenuContent, DropdownMenuItem i DropdownMenuTrigger iz komponente ui/dropdown-menu.tsx
+-importujemo komponentu Button iz komponente ui/button.tsx
+-importujemo React ikonicu AlignLeft iz paketa Lucide React
+-importujemo komponentu Link iz paketa Next Link
+-importujemo niz links iz utils/links.tsx fajla
+-u jsx-u dodajemo komponentu DropdownMenu kao roditelj element
+-u komponentu DropdownMenu dodajemo komponentu DropdownMenuTrigger sa otvorenim i zatvorenim tagom 
+-komponenti DropdownMenuTrigger dodajemo prop asChild i className
+-u komponentu DropdownMenuTrigger dodajemo komponentu Button sa prop variant i size
+-u komponenti Button kreiramo dva span elementa sa Tailwind CSS klasama
+-u prvi span element dodajemo komponentu AlignLeft
+-u drugi span element dodajemo tekst sa klasom sr-only (dokumentacija)
+-u komponentu DropdownMenu dodajemo komponentu DropdownMenuContent sa otvorenim i zatvorenim tagom
+-komponenti DropdownMenuContent dodajemo prop className, align i sideOffset
+-u komponentu DropdownMenuContent dodajemo metodu links?.map()
+-u funkciji map(), u return izjavu dodajemo komponentu DropdownMenuItem sa otvorenim i zatvorenim tagom
+-komponenti DropdownMenuItem dodajemo prop key
+-u komponentu DropdownMenuItem dodajemo komponentu Link sa prop href i className
+-u komponenti Link kreiramo dva span elementa sa Tailwind CSS klasama
