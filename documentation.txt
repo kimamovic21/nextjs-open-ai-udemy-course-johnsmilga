@@ -1078,3 +1078,9 @@ Section 03: Jobify
 -u jsx-u dodajemo komponentu ClerkProvider sa otvorenim i zatvorenim tagom
 -kreiramo komponentu middleware.tsx
 -u komponentu middleware.tsx importujemo funkciju authMiddleware iz paketa Next Clerk Next.js
+
+117. Nav Links
+-kreiramo folder utils i komponentu links.tsx
+-u komponentu links.tsx importujemo tri React ikonice
+-kreiramo tip NavLink
+-kreiramo niz const links sa tipom NavLink
