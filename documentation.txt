@@ -1064,3 +1064,6 @@ Section 03: Jobify
 -u folderu (dashboard) kreiramo foldere add-job, jobs, stats i komponente page.tsx
 -u folderu (dashboard) kreiramo komponentu layout.tsx
 -u komponenti layout, funkciji layout() dodajemo parametar destruktuirani prop children sa tipom
+
+115. Important Update !!!
+-Clerk package update
