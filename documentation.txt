@@ -1030,3 +1030,7 @@ Section 03: Jobify
 108. Important Info !!!
 
 109. Intro
+
+110. Setup
+-preuzmemmo starter folder jobify
+-u terminalu ukucamo komande npm install i npm run dev
