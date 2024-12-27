@@ -1115,3 +1115,13 @@ Section 03: Jobify
 -u komponentu Button dodajemo komponentu Link sa prop href i className
 -u komponenti Link kreiramo dva span elementa sa Tailwind CSS klasama
 -u prop variant dodajemo uslov ternarni operator pathname === link.href ?
+
+120. Navbar
+-u komponentu Navbar.tsx importujemo komponentu UserButton iz paketa Clerk Next
+-importujemo komponente LinksDropdown.tsx i ThemeToggle.tsx
+-u jsx-u kreiramo nav element kao roditelj element sa Tailwind CSS klasama
+-u nav elementu kreiramo dva div elementa
+-u prvi div element dodajemo komponentu LinksDropdown
+-u drugi div element dodajemo komponente ThemeToggle i UserButton
+-drugom div elementu dodajemo Tailwind CSS Flex klase
+-komponenti UserButton dodajemo prop afterSignOutUrl
