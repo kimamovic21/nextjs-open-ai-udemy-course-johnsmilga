@@ -930,7 +930,7 @@ export function CustomFormField({ name, control }: CustomFormFieldProps) {
       )}
     />
   );
-}
+};
 
 type CustomFormSelectProps = {
   name: string;
@@ -974,8 +974,7 @@ export function CustomFormSelect({
       )}
     />
   );
-}
-export default CustomFormSelect;
+};
 ```
 
 ## Challenge - CreateJobForm

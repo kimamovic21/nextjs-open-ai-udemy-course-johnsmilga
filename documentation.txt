@@ -1201,3 +1201,24 @@ Section 03: Jobify
 -vrijednost metode z.object() pohranjujemo u varijablu createAndEditJobSchema
 -eksportujemo varijablu createAndEditJobSchema
 -kreiramo i eksportujemo tipv CreateAndEditJobType
+
+126. Custom Form Components
+-otvorimo link: https://ui.shadcn.com/docs/components/select
+-u folderu components kreiramo komponentu FormComponents.tsx
+-u komponentu FormComponents.tsx importujemo komponente Form i Input iz foldera components/ui
+-importujemo komponente FormControl, FormField, FormItem, FormLabel i FormMessage iz komponente ui/form.tsx
+-importujemo komponente Select, SelectContent, SelectItem, SelectTrigger, i SelectValue iz komponente ui/select.tsx
+-kreiramo i eksportujemo funkcije CustomFormField() i CustomFormSelect()
+-kreiramo tip CustomFormFieldProps
+-funkciji CustomFormField() dodajemo parametre destruktuirane prop name i constrol sa tipom CustomFormFieldProps
+-u jsx-u dodajemo komponentu FormField sa prop control, name i render
+-kreiramo tip CustomFormSelectProps
+-funkciji CustomFormSelect() dodajemo parametre destruktuirane prop name, control, items i labelText
+-parametrima dodajemo tip CustomFormSelectProps
+-u jsx-u dodajemo komponentu FormField sa prop control, form i render
+-u prop render proslijedujemo funkciju ({ field })
+-u funkciju ({ field }) dodajemo komponentu FormItem
+-u komponentu FormItem dodajemo komponente FormLabel, Select i FormMessage
+-u komponentu Select dodajemo komponente FormControl i SelectContent
+-u komponentu SelectContent dodajemo metodu items?.map()
+-u funkciju map() dodajemo komponentu SelectItem
