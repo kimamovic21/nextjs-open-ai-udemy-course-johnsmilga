@@ -1170,3 +1170,24 @@ Section 03: Jobify
 -komponenti ThemeProvider dodajemo prop attribute, defaultTheme, enableSystem i disabled
 -u komponentu ThemeProvider dodajemo prop children
 -u komponentu ThemeToggle.tsx dodajemo kod iz dokumentacije
+
+124. Shadcn-ui Forms
+-otvorimo link: https://ui.shadcn.com/docs/components/form
+-otvorimo link: https://www.npmjs.com/package/@hookform/resolvers
+-otvorimo link: https://www.npmjs.com/package/react-hook-form
+-u terminalu ukucamo komandu: npx shadcn@latest add form input
+-u folderu components kreiramo komponentu CreateJobForm.tsx
+-u komponentu CreateJobForm.tsx importujemo * kao z iz paketa zod
+-importujemo funkcije useForm i zodResolver
+-importujemo komponente Button i Input iz foldera components/ui
+-importujemo komponente Form, FormControl, FormField, FormItem, FormLabel i FormMessage iz komponente ui/form.tsx
+-kreiramo varijablu const formSchema
+-u funkciji CreateJobForm() kreiramo varijablu const form
+-kreiramo funkciju onSubmit() sa parametrom values
+-u jsx-u dodajemo komponentu Form sa otvorenim i zatvorenim tagom
+-komponenti Form dodajemo prop {...form}
+-u komponenti Form kreiramo form element sa prop onSubmit i className
+-u prop onSubmit proslijedujemo funkciju form.handleSubmit(onSubmit)
+-u form element dodajemo komponente FormField i Button
+-komponenti FormField dodajemo prop control, name i render
+-u komponentu add-job/page.tsx importujemo komponentu CreateJobForm.tsx
