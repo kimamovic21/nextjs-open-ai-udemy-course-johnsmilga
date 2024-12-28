@@ -565,6 +565,8 @@ export default Providers;
 app/layout
 
 ```tsx
+import Providers from './providers';
+
 <html lang='en' suppressHydrationWarning>
   <body className={inter.className}>
     <Providers>{children}</Providers>
@@ -578,8 +580,6 @@ app/layout
   [Dark Mode](https://ui.shadcn.com/docs/dark-mode/next)
 
 ## Dark Mode
-
-[Dark Mode](https://ui.shadcn.com/docs/dark-mode/next)
 
 ```sh
 npm install next-themes
@@ -639,7 +639,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-export function ModeToggle() {
+function ThemeToggle() {
   const { setTheme } = useTheme();
 
   return (
@@ -664,7 +664,9 @@ export function ModeToggle() {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-}
+};
+
+export default ThemeToggle;
 ```
 
 ## CreateJobForm Setup

@@ -1153,3 +1153,20 @@ Section 03: Jobify
 -otvorimo link: https://ui.shadcn.com/docs/theming
 -otvorimo link: https://ui.shadcn.com/themes
 -u globals.css fajl dodajemo kod za direktivu @layer base
+
+123. Toggle Theme
+-u folderu app kreiramo komponentu providers.tsx
+-u komponenti providers kreiramo i eksportujemo kao default funkciju Providers()
+-funkciji Providers dodajemo parametar destruktuirani prop children sa tipom
+-u komponentu app/layout.tsx importujemo komponentu Providers iz komponente providers.tsx
+-u jsx-u html elementu dodajemo prop suppressHydrationWarning
+-u element body dodajemo komponentu Providers sa otvorenim i zatvorenim tagom
+-u komponentu Providers dodajemo prop children
+-otvorimo link: https://ui.shadcn.com/docs/dark-mode/next
+-u terminalu instaliramo paket Next Themes sa komandom npm install next-themes
+-u folderu components kreiramo komponentu theme-provider.tsx
+-u komponentu providers.tsx importujemo komponentu ThemeProvider iz komponente theme-provider.tsx
+-u jsx-u dodajemo komponentu ThemeProvider sa otvorenim i zatvorenim tagom
+-komponenti ThemeProvider dodajemo prop attribute, defaultTheme, enableSystem i disabled
+-u komponentu ThemeProvider dodajemo prop children
+-u komponentu ThemeToggle.tsx dodajemo kod iz dokumentacije
