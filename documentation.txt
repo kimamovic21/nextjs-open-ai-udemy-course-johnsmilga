@@ -1191,3 +1191,13 @@ Section 03: Jobify
 -u form element dodajemo komponente FormField i Button
 -komponenti FormField dodajemo prop control, name i render
 -u komponentu add-job/page.tsx importujemo komponentu CreateJobForm.tsx
+
+125. Types
+-u folderu utils kreiramo types.ts fajl
+-u types.ts fajl importujemo * kao z iz paketa zod
+-kreiramo i eksportujemo tip JobType
+-kreiramo i eksportujemo dva enuma JobStatus i JobMode
+-dodajemo metodu z.object()
+-vrijednost metode z.object() pohranjujemo u varijablu createAndEditJobSchema
+-eksportujemo varijablu createAndEditJobSchema
+-kreiramo i eksportujemo tipv CreateAndEditJobType

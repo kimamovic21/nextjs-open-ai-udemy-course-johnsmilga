@@ -778,7 +778,8 @@ export default CreateJobForm;
 3. **Define the `createAndEditJobSchema` object:**
 
    - Use `z.object()` from the zod library to define a schema for creating and editing jobs.
-   - The schema includes `position`, `company`, `location`, `status`, and `mode`. Each of these fields is a string with a minimum length of 2 characters, except for `status` and `mode` which are enums.
+   - The schema includes `position`, `company`, `location`, `status`, and `mode`. Each of these fields is a string with a 
+     minimum length of 2 characters, except for `status` and `mode` which are enums.
 
 4. **Export the `createAndEditJobSchema` object:**
 
