@@ -1148,3 +1148,8 @@ Section 03: Jobify
 -komponenti DropdownMenuItem dodajemo prop key
 -u komponentu DropdownMenuItem dodajemo komponentu Link sa prop href i className
 -u komponenti Link kreiramo dva span elementa sa Tailwind CSS klasama
+
+122. Change Theme
+-otvorimo link: https://ui.shadcn.com/docs/theming
+-otvorimo link: https://ui.shadcn.com/themes
+-u globals.css fajl dodajemo kod za direktivu @layer base
