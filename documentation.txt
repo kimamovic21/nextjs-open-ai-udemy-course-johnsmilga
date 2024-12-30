@@ -1311,3 +1311,25 @@ Section 03: Jobify
 -komponenti HydrationBoundary dodajemo prop state
 -u prop state proslijedujemo funkciju dehydrate(queryClient)
 -u komponentu HydrationBoundary dodajemo komponentu CreateJobForm
+
+132. CreateJobForm - Complete
+-u komponentu CreateJobForm.tsx importujemo funkciju useRouter iz paketa Next Navigation
+-importujemo funkcije useMutation i useQueryClient iz paketa Tanstack
+-importujemo funkciju createJobAction iz actions.ts fajla
+-importujemo funkciju useToast iz use-toast.ts fajla
+-u funkciji Create() kreiramo varijable const queryClient i const router
+-dodajemo funkciju useToast()
+-vrijednost funkcije useToast() pohranjujemo u destruktuiranu varijablu const { toast }
+-dodajemo funkciju useMutation() sa konfiguracionim objektom
+-vrijednost funkcije useMutation() pohranjujemo u destruktuirane varijable const { mutate, isPending }
+-u konfiguracioni objekt dodajemo funkcije mutationFn i onSuccess
+-u funkciju mutationFn proslijedujemo funkciju createJobAction(values)
+-funkciji onSuccess dodajemo parametar data
+-dodajemo uslov if (!data)
+-u uslov if (!data) dodajemo funkciju toast() za prikazivanje error poruke
+-nakon uslova if dodajemo funkciju toast() da je posao uspjesno kreiran
+-dodajemo tri funkcije queryClient.invalidateQueries()
+-dodajemo funkciju router.push('/jobs')
+-u funkciju function onSubmit() dodajemo funkciju mutate(values)
+-u jsx-u, u komponentama Button dodajemo uslov ternarni uslov isPending ?
+-otvorimo rutu http://localhost:3000/add-job i kreiramo posao

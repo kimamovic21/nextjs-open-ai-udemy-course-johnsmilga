@@ -1378,17 +1378,17 @@ import { useRouter } from 'next/navigation';
 
 // logic
 const queryClient = useQueryClient();
-const { toast } = useToast();
 const router = useRouter();
+const { toast } = useToast();
+
 const { mutate, isPending } = useMutation({
   mutationFn: (values: CreateAndEditJobType) => createJobAction(values),
   onSuccess: (data) => {
     if (!data) {
-      toast({
-        description: 'there was an error',
-      });
+      toast({ description: 'there was an error' });
       return;
-    }
+    };
+
     toast({ description: 'job created' });
     queryClient.invalidateQueries({ queryKey: ['jobs'] });
     queryClient.invalidateQueries({ queryKey: ['stats'] });
@@ -1401,7 +1401,8 @@ const { mutate, isPending } = useMutation({
 
 function onSubmit(values: CreateAndEditJobType) {
   mutate(values);
-}
+};
+
 // return
 <Button type='submit' className='self-end capitalize' disabled={isPending}>
   {isPending ? 'loading...' : 'create job'}
