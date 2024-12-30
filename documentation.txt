@@ -187,9 +187,9 @@ Quiz 1: Fundamentals Quiz
 -generisemo folder prisma i schema.prisma fajl
 -u .gitignore fajl dodajemo .env fajl
 -otvorimo link: https://www.prisma.io/docs/getting-started/quickstart-sqlite
--u .env fajl dodajemo u varijablu DATABASE_URL vrijednost "file:./dev.db"
--u schema.prisma fajl dodajemo u objekt datasource db key - value par  provider = "sqlite"
--otvorenim link: https://www.prisma.io/docs/guides/other/troubleshooting-orm/help-articles/nextjs-prisma-client-dev-practices#solution
+-u .env fajl dodajemo u varijablu: DATABASE_URL="file:./dev.db"
+-u schema.prisma fajl dodajemo u objekt datasource db key - value par provider = "sqlite"
+-otvorimo link: https://www.prisma.io/docs/guides/other/troubleshooting-orm/help-articles/nextjs-prisma-client-dev-practices#solution
 -kreiramo folder utils i db.ts fajl
 -u db.ts fajl kopiramo kod iz dokumentacije
 
@@ -1236,3 +1236,26 @@ Section 03: Jobify
 -u div element dodajemo tri komponente CustomFormField sa prop name i control
 -dodajemo dvije komponente CustomFormSelect
 -komponentama CustomFormSelect dodajemo prop name, control, labelText i items
+
+128. Render and Prisma
+1. nacin Render
+-otvorimo web stranicu: https://render.com/
+-kreiramo novi projekt na web stranici Render
+-otvorimo link: https://render.com/docs/postgresql-creating-connecting
+2. nacin Neon
+-otvorimo web stranicu: https://neon.tech/
+-kreiramo novi projekt na web stranici Neon
+3. nacin lokalno
+-otvorimo link: https://www.prisma.io/docs/getting-started/quickstart-sqlite
+-u .env fajl dodajemo u varijablu: DATABASE_URL="file:./dev.db"
+-kreiramo .env.example fajl u koji dodajemo primjer varijable koju je potrebno kreirati
+-u schema.prisma fajl dodajemo u objekt datasource db key - value par provider = "sqlite"
+-otvorimo link: https://www.prisma.io/docs/guides/other/troubleshooting-orm/help-articles/nextjs-prisma-client-dev-practices#solution
+-kreiramo folder utils i db.ts fajl
+-u db.ts fajl kopiramo kod iz dokumentacije
+-u schema.model fajlu kreiramo model Job
+-u terminalu ukucamo komandu npx prisma migrate dev 
+-odaberemo ime migracije: jobify-model
+-generisemo folder migrations i fajlove unutar njega
+-u terminalu ukucamo komandu npx prisma db push
+-u terminalu ukucamo komandu npx prisma studio

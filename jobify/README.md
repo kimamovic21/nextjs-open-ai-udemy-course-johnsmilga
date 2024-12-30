@@ -1110,15 +1110,15 @@ export default CreateJobForm;
 
 ```prisma
 model Job {
-  id        String      @id @default(uuid())
+  id        String   @id @default(uuid())
   clerkId   String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  position    String
+  position  String
   company   String
   location  String
-  status      String
-  mode     String
+  status    String
+  mode      String
 }
 ```
 
