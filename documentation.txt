@@ -1292,3 +1292,22 @@ Section 03: Jobify
 130. Toast Component
 -otvorimo link: https://ui.shadcn.com/docs/components/toast
 -u terminalu ukucamo komandu: npx shadcn@latest add toast
+
+131. React Query - Setup
+-u komponentu providers.tsx importujemo funkciju useState() iz paketa React
+-importujemo funkcije QueryClient i QueryClientProvider iz paketa Tanstack
+-importujemo komponentu ReactQueryDevtools iz paketa Tanstack
+-importujemo komponentu Toaster iz komponente ui/toaster.tsx
+-kreiramo varijablu const [queryClient]
+-u jsx-u, u komponentu ThemeProvider dodajemo komponentu Toaster
+-dodajemo komponentu QueryClientProvider sa otvorenim i zatvorenim tagom
+-komponenti QueryClientProvider dodajemo prop client
+-u prop client proslijedujemo varijablu queryClient
+-u komponentu QueryClientProvider dodajemo prop children i komponentu ReactQueryDevtools 
+-u komponentu add-page/page.tsx importujemo komponentu CreateJobForm.tsx
+-importujemo funkcije dehydrate, QueryClient i komponentu HydrationBoundary
+-kreiramo varijablu const queryClient
+-u jsx-u dodajemo komponentu HydrationBoundary sa otvorenim i zatvorenim tagom
+-komponenti HydrationBoundary dodajemo prop state
+-u prop state proslijedujemo funkciju dehydrate(queryClient)
+-u komponentu HydrationBoundary dodajemo komponentu CreateJobForm
