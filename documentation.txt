@@ -1288,3 +1288,7 @@ Section 03: Jobify
 -dodajemo izjavu return job
 -u blok koda try dodajemo pozivamo funkciju createAndEditJobSchema.parse(values)
 -dodajemo metodu await new Promise()
+
+130. Toast Component
+-otvorimo link: https://ui.shadcn.com/docs/components/toast
+-u terminalu ukucamo komandu: npx shadcn@latest add toast
