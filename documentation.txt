@@ -1259,3 +1259,32 @@ Section 03: Jobify
 -generisemo folder migrations i fajlove unutar njega
 -u terminalu ukucamo komandu npx prisma db push
 -u terminalu ukucamo komandu npx prisma studio
+
+129. CreateJobAction
+-u folderu utils kreiramo actions.ts fajl
+-u actions.ts fajl dodajemo direktivu 'use server'
+-importujemo funkciju auth iz paketa Clerk Nextjs
+-importujemo funkciju redirect iz paketa Next Navigation
+-importujemo tipove JobType, CreateAndEditJobType i semu createAndEditJobSchema iz types.ts fajla
+-importujemo instancu prisma iz db.ts fajla
+-kreiramo i eksportujemo asinhronu funkciju createJobAction()
+-funkciji createJobAction() dodajemo parametar values sa tipom CreateAndEditJobType
+-funkciji createJobAction() dodajemo tip Promise<JobType | null>
+-dodajemo blokove koda try - catch
+-u blok koda catch dodajemo izjavu return null
+-u blok koda try dodajemo metodu await await prisma.job.create()
+-vrijednost metode await prisma.job.create() pohranjujemo u varijablu const job:JobType
+-u funkciju create() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekt data
+-kreiramo funkciju authenticateAndRedirect()
+-u funkciji authenticateAndRedirect() pozivamo funkciju auth()
+-vrijednost funkcije auth() pohranjujemo u destruktuiranu varijablu const { userId }
+-dodajemo uslov if (!userId) 
+-u uslov if (!userId) dodajemo funkciju redirect('/')
+-dodajemo izjavu return userId
+-u funkciji createJobAction() pozivamo funkciju authenticateAndRedirect() sa tipom string
+-vrijednost funkcije authenticateAndRedirect() pohranjujemo u varijablu const userId
+-u objekt data dodajemo vrijednosti ...values i clerkId
+-dodajemo izjavu return job
+-u blok koda try dodajemo pozivamo funkciju createAndEditJobSchema.parse(values)
+-dodajemo metodu await new Promise()
