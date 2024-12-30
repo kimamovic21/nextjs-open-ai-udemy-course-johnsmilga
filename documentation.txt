@@ -1222,3 +1222,17 @@ Section 03: Jobify
 -u komponentu Select dodajemo komponente FormControl i SelectContent
 -u komponentu SelectContent dodajemo metodu items?.map()
 -u funkciju map() dodajemo komponentu SelectItem
+
+127. CreateJobForm Continued
+-u komponentu CreateJobForm.tsx importujemo tipove iz types.ts fajla
+-importujemo komponente CustomFormField i CustomFormSelect iz komponente FormComponents.tsx
+-kreiramo varijablu const form
+-kreiramo funkciju onSubmit sa parametrom values
+-parametru values dodajemo tip CreateAndEditJobType
+-u jsx-u, form elementu dodajemo prop onSubmit
+-u prop onSubmit proslijedujemo funkciju form.handleSubmit(onSubmit)
+-u form elementu kreiramo h2 element sa Tailwind CSS klasama
+-kreiramo div element sa Tailwind CSS Grid klasama
+-u div element dodajemo tri komponente CustomFormField sa prop name i control
+-dodajemo dvije komponente CustomFormSelect
+-komponentama CustomFormSelect dodajemo prop name, control, labelText i items
