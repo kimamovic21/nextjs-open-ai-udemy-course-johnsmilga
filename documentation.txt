@@ -1335,3 +1335,27 @@ Section 03: Jobify
 -otvorimo rutu http://localhost:3000/add-job i kreiramo posao
 
 133. GetAllJobsAction - Overview
+
+134. GetAllJobsAction
+-u actions.ts fajlu kreiramo tip GetAllJobsActionTypes
+-kreiramo i eksportujemo asinhronu funkciju getAllJobsAction() sa parametrom objektom
+-u parametar objekt dodajemo vrijednosti search, jobStatus, page i limit
+-parametru objektu dodajemo tip GetAllJobsActionTypes
+-funkciji getAllJobsAction() dodajemo tip Promise<{...}>
+-u funkciji getAllJobsAction() pozivamo funkciju authenticateAndRedirect()
+-vrijednost funkcije authenticateAndRedirect() pohranjujemo u varijablu const userId
+-dodajemo blokove koda try - catch
+-u blok koda try dodajemo metodu prisma.job.findMany()
+-kreiramo varijablu let whereClause
+-importujemo instancu Prisma iz paketa Prisma Client
+-varijabli let whereClause dodajemo tip Prisma.JobWhereInput
+-funkciji findMany() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo key - value parove where: whereClause i objekt orderBy
+-vrijednost metode prisma.job.findMany() pohranjujemo u varijablu const jobs
+-varijabli const jobs dodajemo tip JobType[]
+-dodajemo uslov if (search)
+-u uslov if (search) dodajemo objekt whereClause i Prisma niz OR
+-dodajemo uslov if (JobStatus && JobStatus !== 'all)
+-u uslov if dodajemo objekt whereClause
+-dodajemo izjavu objekt return { jobs, count: 0, page: 1, totalPages: 0 }
+-u blok koda catch(error) dodajemo izjavu objekt return { jobs: [], count: 0, page: 1, totalPages: 0 }
