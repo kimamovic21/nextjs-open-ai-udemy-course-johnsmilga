@@ -1985,7 +1985,9 @@ export async function deleteJobAction(id: string): Promise<JobType | null> {
    - Use the `useMutation` hook to get the `mutate` function and `isPending` state.
    - Pass an object to the `useMutation` hook with `mutationFn` and `onSuccess` properties.
    - The `mutationFn` property should be a function that takes `id` as a parameter and calls `deleteJobAction` with `id`.
-   - The `onSuccess` property should be a function that takes `data` as a parameter and invalidates the `jobs`, `stats`, and `charts` queries if data is truthy. If data is falsy, it should call `toast` with an object that has a `description` property of 'there was an error'.
+   - The `onSuccess` property should be a function that takes `data` as a parameter and invalidates the `jobs`, `stats` 
+     and `charts` queries if data is truthy. If data is falsy, it should call `toast` with an object that has a `description` 
+     property of 'there was an error'.
 
 4. **Create the component UI**
 
@@ -1999,12 +2001,10 @@ export async function deleteJobAction(id: string): Promise<JobType | null> {
 ## DeleteJobButton
 
 ```tsx
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import JobInfo from './JobInfo';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { deleteJobAction } from '@/utils/actions';
 import { useToast } from '@/components/ui/use-toast';
+import { deleteJobAction } from '@/utils/actions';
+import { Button } from './ui/button';
 
 function DeleteJobBtn({ id }: { id: string }) {
   const { toast } = useToast();
@@ -2025,6 +2025,7 @@ function DeleteJobBtn({ id }: { id: string }) {
       toast({ description: 'job removed' });
     },
   });
+
   return (
     <Button
       size='sm'
@@ -2036,7 +2037,8 @@ function DeleteJobBtn({ id }: { id: string }) {
       {isPending ? 'deleting...' : 'delete'}
     </Button>
   );
-}
+};
+
 export default DeleteJobBtn;
 ```
 

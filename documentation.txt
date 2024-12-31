@@ -1463,3 +1463,40 @@ Section 03: Jobify
 -u komponentu CardContent dodajemo tri komponente JobInfo sa prop icon i text
 -dodajemo komponentu Badge sa prop className
 -u komponentu Badge dodajemo komponentu JobInfo sa prop icon i text
+
+142. Delete Job
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju deleteJobAction() sa parametrom id
+-parametru id dodajemo tip string
+-funkciji deleteJobAction() dodajemo tip Promise<JobType | null>
+-u funkciji deleteJobAction() pozivamo funkciju authenticateAndRedirect()
+-vrijednost funkcije authenticateAndRedirect() pohranjujemo u varijablu const userId
+-dodajemo blokove koda try - catch
+-u bloku koda try dodajemo metodu await prisma.db.delete()
+-vrijednost metode await prisma.db.delete() pohranjujemo u varijablu const job sa tipom JobType
+-u funkciju deleteJob() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekt where
+-u blok koda catch (error) dodajemo izjavu return null
+-u komponenti JobCard.tsx, u jsx-u komponenti DeleteJobBtn dodajemo prop id
+-u komponentu DeleteJobBtn.tsx importujemo funkcije useMutation i useQueryClient iz paketa Tanstack
+-importujemo funkciju useToast iz ui/toast.ts fajla
+-importujemo funkciju deleteJobAction iz actions.ts fajla
+-importujemo komponentu Button iz komponente ui/button.tsx
+-u funkciji DeleteJobBtn() pozivamo funkciju useToast()
+-vrijednost funkcije useToast() pohranjujemo u destruktuiranu varijablu const { toast }
+-kreiramo varijablu const queryClient
+-pozivamo funkciju useMutation()
+-vrijednost funkcije useMutation pohranjujemo u destruktuirane varijable const { mutate, isPending }
+-u funkciju useMutation() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo funkcije mutationFn i onSuccess
+-u funkciju mutationFn proslijedujemo funkciju deleteJobAction(id)
+-u funkciju onSuccess dodajemo uslov if (!data) 
+-u uslov if (!data) dodajemo funkciju toast() sa porukom da je doslo do greske
+-dodajemo izjavu return
+-nakon uslova if dodajemo tri metode queryClient.invalidateQueries()
+-dodajemo funkciju toast() sa porukom da je posao obrisan
+-u jsx-u dodajemo komponentu Button kao roditelj element
+-komponenti Button dodajemo prop size, disabled i onClick
+-u prop disabled proslijedujemo varijablu isPending
+-u dogadaj onClick proslijedujemo funkciju () => mutate(id)
+-u komponentu Button dodajemo uslov ternarni operator isPending ?
+-otvorimo rutu http://localhost:3000/jobs i obrisemo posao
