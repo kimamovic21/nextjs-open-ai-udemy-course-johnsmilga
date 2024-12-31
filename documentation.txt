@@ -1430,3 +1430,9 @@ Section 03: Jobify
 -u div element dodajemo metodu jobs?.map()
 -u funkciju map() dodajemo komponentu JobCard sa prop key i job
 -otvorimo rutu: http://localhost:3000/jobs
+
+139. Additional Shadcn-UI Components
+-u terminalu ukucamo komandu: npx shadcn@latest add badge separator card
+-otvorimo link: https://ui.shadcn.com/docs/components/badge
+-otvorimo link: https://ui.shadcn.com/docs/components/separator
+-otvorimo link: https://ui.shadcn.com/docs/components/card
