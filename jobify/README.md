@@ -1443,7 +1443,8 @@ function onSubmit(values: CreateAndEditJobType) {
 6. **Handle errors**
 
    - Wrap the database operation in a try-catch block.
-   - If an error occurs, log the error to the console and return an object with `jobs`, `count`, `page`, and `totalPages` properties, all of which have 0 or [] as their values.
+   - If an error occurs, log the error to the console and return an object with `jobs`, `count`, `page`, and `totalPages` properties, 
+     all of which have 0 or [] as their values.
 
 7. **Return the jobs**
 

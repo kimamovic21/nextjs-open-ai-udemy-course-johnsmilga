@@ -1333,3 +1333,5 @@ Section 03: Jobify
 -u funkciju function onSubmit() dodajemo funkciju mutate(values)
 -u jsx-u, u komponentama Button dodajemo uslov ternarni uslov isPending ?
 -otvorimo rutu http://localhost:3000/add-job i kreiramo posao
+
+133. GetAllJobsAction - Overview
