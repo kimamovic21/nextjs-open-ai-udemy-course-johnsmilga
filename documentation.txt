@@ -1359,3 +1359,20 @@ Section 03: Jobify
 -u uslov if dodajemo objekt whereClause
 -dodajemo izjavu objekt return { jobs, count: 0, page: 1, totalPages: 0 }
 -u blok koda catch(error) dodajemo izjavu objekt return { jobs: [], count: 0, page: 1, totalPages: 0 }
+
+135. Jobs Page - Setup
+-u folderu components kreiramo pet tsx komponenti: SearchForm, JobsList, JobCard, JobInfo i DeleteJobBtn
+-u komponentu JobCard.tsx importujemo tip JobType
+-u folderu app/jobs kreiramo komponentu loading.tsx
+-u komponentu jobs/page.tsx importujemo funkcije dehydrate, QueryClient i komponentu HydrationBoundary iz paketa Tanstack
+-importujemo funkciju getAllJobsAction iz actions.ts fajla
+-importujemo komponente JobsList.tsx i SearchForm.tsx iz foldera components
+-funkciji JobsPage() dodajemo asinhronost
+-u funkciji JobsPage() kreiramo varijablu const queryClient
+-dodajemo metodu await queryClient.prefetchQuery()
+-u funkciju prefetchQuery() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo niz queryKey i funkciju queryFn
+-u jsx-u dodajemo komponentu HydrationBoundary kao roditelj element
+-komponenti HydrationBoundary dodajemo prop state
+-u prop state proslijedujemo funkciju dehydrate(queryClient)
+-u komponentu HydrationBoundary dodajemo komponente SearchForm i JobsList
