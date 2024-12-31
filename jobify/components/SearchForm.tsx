@@ -17,14 +17,21 @@ function SearchForm() {
   const search = searchParams.get('search') || '';
   const jobStatus = searchParams.get('jobStatus') || 'all';
 
+  const router = useRouter();
+  const pathname = usePathname();
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
     const search = formData.get('search') as string;
     const jobStatus = formData.get('jobStatus') as string;
-    console.log('Search:',search);
-    console.log('Job Status:', jobStatus);
+    
+    const params = new URLSearchParams();
+    params.set('search', search);
+    params.set('jobStatus', jobStatus);
+
+    router.push(`${pathname}?${params.toString()}`);
   };
 
   return (
@@ -44,7 +51,7 @@ function SearchForm() {
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
-          {['all', ...Object.values(JobStatus)].map((jobStatus) => {
+          {['all', ...Object.values(JobStatus)]?.map((jobStatus) => {
             return (
               <SelectItem key={jobStatus} value={jobStatus}>
                 {jobStatus}

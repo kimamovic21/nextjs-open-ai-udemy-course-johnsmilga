@@ -1398,3 +1398,12 @@ Section 03: Jobify
 -u funkciju handleSubmit() dodajemo metodu e.preventDefault()
 -kreiramo varijable const formData, const search i const jobStatus
 -u prop onSubmit proslijedujemo funkciju handleSubmit
+
+137. SearchForm Component - Functionality
+-u komponenti SearchForm.tsx, u funkciji handleSubmit() kreiramo varijablu const params
+-dodajemo dvije metode params.set()
+-kreiramo varijable const router i const pathname
+-u funkciju handleSubmit() dodajemo metodu router.push()
+-kreiramo varijable const searchParams, const search i const jobStatus
+-u jsx-u, u komponenti Input, u prop defaultValue proslijedujemo varijablu search
+-u komponenti Select, u prop defaultValue proslijedujemo varijablu jobStatus
