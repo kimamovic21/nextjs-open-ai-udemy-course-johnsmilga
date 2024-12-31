@@ -1804,7 +1804,8 @@ npx shadcn@latest add badge separator card
 
 4. **Create the component UI**
 
-   - In the component's return statement, create the component UI using the `Card`, `CardHeader`, `CardTitle`, `CardDescription`, `Separator`, `CardContent`, `CardFooter`, `Button`, `Link`, and `DeleteJobButton` components.
+   - In the component's return statement, create the component UI using the components:
+    `Card`, `CardHeader`, `CardTitle`, `CardDescription`, `Separator`, `CardContent`, `CardFooter`, `Button`, `Link`, and `DeleteJobButton`.
    - Pass the `job.position` and `job.company` as the children of the `CardTitle` and `CardDescription` components, respectively.
    - Pass the `job.id` as the `href` prop to the `Link` component.
    - Pass the `date` as the child of the `CalendarDays` component.
@@ -1817,10 +1818,8 @@ npx shadcn@latest add badge separator card
 JobCard
 
 ```tsx
-import { JobType } from '@/utils/types';
 import { MapPin, Briefcase, CalendarDays, RadioTower } from 'lucide-react';
-
-import Link from 'next/link';
+import { JobType } from '@/utils/types';
 import {
   Card,
   CardContent,
@@ -1832,11 +1831,13 @@ import {
 import { Separator } from './ui/separator';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
+import Link from 'next/link';
 import JobInfo from './JobInfo';
 import DeleteJobButton from './DeleteJobButton';
 
 function JobCard({ job }: { job: JobType }) {
   const date = new Date(job.createdAt).toLocaleDateString();
+
   return (
     <Card className='bg-muted'>
       <CardHeader>
@@ -1853,7 +1854,8 @@ function JobCard({ job }: { job: JobType }) {
       </CardFooter>
     </Card>
   );
-}
+};
+
 export default JobCard;
 ```
 
