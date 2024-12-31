@@ -1453,3 +1453,13 @@ Section 03: Jobify
 -komponenti CardFooter dodajemo prop className
 -u komponentu CardFooter dodajemo komponente Button i DeleteJobBtn
 -u komponentu Button dodajemo komponentu Link sa prop href
+
+141. JobInfo Component
+-u komponenti JobInfo.tsx, funkciji JobInfo() dodajemo parametre destruktuirane prop icon i text sa tipovima
+-u jsx-u roditelj div elementu dodajemo Tailwind CSS Flex klase
+-u div elementu kreiramo dva span elementa
+-u komponenti JobCard() kreiramo varijablu const date
+-u jsx-u, komponenti CardContent dodajemo Tailwind CSS Grid klase
+-u komponentu CardContent dodajemo tri komponente JobInfo sa prop icon i text
+-dodajemo komponentu Badge sa prop className
+-u komponentu Badge dodajemo komponentu JobInfo sa prop icon i text
