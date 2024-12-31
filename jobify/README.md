@@ -1717,7 +1717,8 @@ export default SearchContainer;
    - Use the `useQuery` hook to fetch the jobs from the server.
    - Pass an object to this hook with `queryKey` and `queryFn` properties.
    - The `queryKey` property should be an array with 'jobs', `search`, `jobStatus`, and `pageNumber`.
-   - The `queryFn` property should be a function that calls `getAllJobsAction` with an object that has `search`, `jobStatus`, and `page` properties.
+   - The `queryFn` property should be a function that calls `getAllJobsAction` with an object that has `search`, `jobStatus`
+     and `page` properties.
    - Store the return value of this hook in `data` and `isPending`.
 
 5. **Handle loading and empty states**

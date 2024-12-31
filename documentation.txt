@@ -1407,3 +1407,26 @@ Section 03: Jobify
 -kreiramo varijable const searchParams, const search i const jobStatus
 -u jsx-u, u komponenti Input, u prop defaultValue proslijedujemo varijablu search
 -u komponenti Select, u prop defaultValue proslijedujemo varijablu jobStatus
+
+138. JobsList Component
+-u komponentu JobsList.tsx dodajemo direktivu 'use client'
+-importujemo funkciju useSearchParams iz paketa Next Navigation
+-importujemo funkciju useQuery iz paketa Tanstack
+-importujemo funkciju getAllJobsAction iz actions.ts fajla
+-importujemo komponentu JobCard.tsx
+-u funkciji JobsList() pozivamo funkcije useQuery()
+-u funkciju useQuery() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo niz queryKey i funkciju queryFn
+-u funkciju queryFn proslijedujemo funkciju getAllJobsAction({})
+-vrijednost funkcije useQuery() pohranjujemo u destruktuirane varijable const { data, isPending }
+-kreiramo varijable const searchParams, const search i const jobStatus
+-kreiramo varijablu const pageNumber
+-u niz queryKey dodajemo varijable search, jobStatus i pageNumber
+-u funkciju getAllJobsAction(), u objekt dodajemo varijable search, jobStatus i page: pageNumber
+-kreiramo varijablu const jobs
+-dodajemo dva uslova if (isPending) i if (jobs.length < 1)
+-u jsx-u dodajemo prazan fragment kao roditelj element
+-u praznom fragmentu kreiramo div element sa Tailwind CSS Grid klasama
+-u div element dodajemo metodu jobs?.map()
+-u funkciju map() dodajemo komponentu JobCard sa prop key i job
+-otvorimo rutu: http://localhost:3000/jobs
