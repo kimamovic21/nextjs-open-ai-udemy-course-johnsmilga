@@ -1376,3 +1376,25 @@ Section 03: Jobify
 -komponenti HydrationBoundary dodajemo prop state
 -u prop state proslijedujemo funkciju dehydrate(queryClient)
 -u komponentu HydrationBoundary dodajemo komponente SearchForm i JobsList
+
+136. SearchForm Component - Setup
+-u komponentu SearchForm.tsx dodajemo direktivu 'use client'
+-importujemo funkcije usePathname, useRouter i useSearchParams iz paketa Next Navigation
+-importujemo tip JobStatus iz types.ts fajla
+-importujemo komponente Button i Input iz foldera ui
+-importujemo komponente Select, SelectContent, SelectItem, SelectTrigger i SelectValue iz komponente ui/select.tsx
+-u jsx-u, kreiramo form element kao roditelj element
+-elementu form dodajemo prop className i onSubmit
+-u form element dodajemo komponente Input, Select i Button
+-komponenti Input dodajemo prop type, placeholder, name i defaultValue
+-komponenti Select dodajemo prop name i defaultValue
+-u komponentu Select dodajemo komponente SelectTrigger i SelectContent
+-u komponentu SelectTrigger dodajemo komponentu SelectValue
+-u komponentu Select dodajemo metodu ['all', ...Object.values(JobStatus)].map()
+-u funkciju map() dodajemo izjavu return i komponentu SelectItem as prop key i value
+-komponenti Button dodajemo prop type
+-kreiramo funkciju handleSubmit() sa parametrom e
+-parametru e dodajemo tip React.FormEvent<HTMLFormElement>
+-u funkciju handleSubmit() dodajemo metodu e.preventDefault()
+-kreiramo varijable const formData, const search i const jobStatus
+-u prop onSubmit proslijedujemo funkciju handleSubmit

@@ -1624,10 +1624,10 @@ export default AllJobsPage;
 
 ```tsx
 'use client';
-import { Input } from './ui/input';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { JobStatus } from '@/utils/types';
+import { Input } from './ui/input';
 import { Button } from './ui/button';
-
 import {
   Select,
   SelectContent,
@@ -1635,7 +1635,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { JobStatus } from '@/utils/types';
 
 function SearchContainer() {
   // set default values
@@ -1645,6 +1644,7 @@ function SearchContainer() {
 
   const router = useRouter();
   const pathname = usePathname();
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     let params = new URLSearchParams();
@@ -1652,6 +1652,7 @@ function SearchContainer() {
     const formData = new FormData(e.currentTarget);
     const search = formData.get('search') as string;
     const jobStatus = formData.get('jobStatus') as string;
+
     params.set('search', search);
     params.set('jobStatus', jobStatus);
 
@@ -1686,7 +1687,8 @@ function SearchContainer() {
       <Button type='submit'>Search</Button>
     </form>
   );
-}
+};
+
 export default SearchContainer;
 ```
 
