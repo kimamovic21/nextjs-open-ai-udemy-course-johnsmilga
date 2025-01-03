@@ -1578,3 +1578,18 @@ Section 03: Jobify
 -u funkciji StatsPage() pozivamo funkciju getStatsAction()
 -vrijednost funkcije await getStatsAction() pohranjujemo u varijablu const stats
 -u pretrazivacu otvorimo rutu: http://localhost:3000/stats
+
+147. Charts Action
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju getChartsDataAction()
+-importujemo instancu dayjs iz paketa Dayjs
+-u funkciji getChartsDataAction() kreiramo varijable const userId i sixMonthsAgo
+-dodajemo blokove koda try - catch
+-u blok koda try dodajemo metodu await prisma.job.findMany()
+-u funkciju findMany dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekte where i orderBy
+-vrijednost metode await prisma.job.findMany() pohranjujemo u varijablu const jobs
+-u actions.ts fajlu, u funkciji getChartsDataAction() kreiramo varijablu let applicationsPerMonth
+-dodajemo izjavu return acc
+-u komponentu stats/page.tsx importujemo funkciju getChartsDataAction iz actions.ts fajla
+-u funkciji StatsPage() pozivamo funkciju getChartsDataAction()
+-vrijednost funkcije getChartsDataAction() pohranjujemo u funkciju const charts
