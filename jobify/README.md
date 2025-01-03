@@ -2169,6 +2169,17 @@ async function JobDetailPage({ params }: { params: { id: string } }) {
 export default JobDetailPage;
 ```
 
+components/EditJobForm.tsx
+
+```tsx
+function EditJobForm({ jobId }: { jobId: string }) {
+  return (
+    <div>EditJobForm</div>
+  );
+};
+export default EditJobForm;
+```
+
 ## Challenge - UpdateJobAction
 
 1. **Define the updateJobAction function**

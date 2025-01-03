@@ -1500,3 +1500,38 @@ Section 03: Jobify
 -u dogadaj onClick proslijedujemo funkciju () => mutate(id)
 -u komponentu Button dodajemo uslov ternarni operator isPending ?
 -otvorimo rutu http://localhost:3000/jobs i obrisemo posao
+
+143. Single Job Page
+-u actions.ts fajlu kreiramo i eksportujemo funkciju getSingleJobAction()
+-funkciji getSingleJobAction() dodajemo parametar id sa tipom string
+-funkciji getSingleJobAction() dodajemo tip Promise<JobType | null>
+-u funkciji getSingleJobAction() pozivamo funkciju authenticateAndRedirect()
+-vrijednost funkcije authenticateAndRedirect() pohranjujemo u varijablu const userId
+-kreiramo varijablu let job
+-dodajemo blokove koda try - catch
+-u bloku koda try dodajemo metodu await prisma.job.findUnique()
+-vrijednost metode await prisma.job.findUnique() pohranjujemo u varijablu const job
+-u funkciju findUnique() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekt where
+-u bloku catch redeklarisemo varijablu job = null
+-dodajemo uslov if (!job)
+-u uslov if (!job) dodajemo funkciju redirect('/jobs')
+-dodajemo izjavu return job
+-u folderu jobs kreiramo folder [id] i komponentu page.tsx
+-u komponenti [id]/page.tsx kreiramo i eksportujemo funkciju JobDetailPage() kao default
+-importujemo funkcije dehydrate, QueryClient i komponentu HydrationBoundary iz paketa Tanstack
+-importujemo funkciju getSingleJobAction iz actions.ts fajla
+-u folderu components kreiramo komponentu EditJobForm.tsx
+-funkciji EditJobForm() dodajemo destruktuirani parametar jobId sa tipom string
+-u komponentu [id]/page.tsx importujemo komponentu EditJobForm.tsx
+-u funkciji JobDetailPage() kreiramo varijablu const queryClient
+-dodajemo metodu await queryClient.prefetchQuery()
+-u funkciju prefetchQuery() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo niz queryKey i funkciju queryFn
+-u funkciju queryFn proslijedujemo funkciju getSingleJobAction(params.id)
+-u jsx-u dodajemo komponentu HydrationBoundary kao roditelj element
+-komponenti HydrationBoundary dodajemo prop state
+-u prop state proslijedujemo funkciju dehydrate(queryClient)
+-u komponentu HydrationBoundary dodajemo komponentu EditJobForm 
+-komponenti EditJobForm dodajemo prop jobId
+-u pretrazivacu otvorimo rutu: http://localhost:3000/jobs/[jobId]
