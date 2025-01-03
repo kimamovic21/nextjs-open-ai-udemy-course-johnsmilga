@@ -1551,3 +1551,12 @@ Section 03: Jobify
 -u blok koda catch dodajemo izjavu return null
 -kopiramo kod iz README.md fajla u komponentu EditJobForm.tsx
 -otvorimo rutu: http://localhost:3000/jobs/[jobId] i izmjenimo podatke o poslu
+
+145. Seed Database
+-otvorimo web stranicu: https://www.mockaroo.com
+-na web stranici Mockaroo generisemo 100 poslova sa random podacima
+-preuzmemo fajl i preimenujemo ga u mock-data.json
+-kreiramo seed.js fajl
+-u seed.js fajl kopiramo kod iz README.md fajla
+-u terminalu ukucamo komandu node prisma/seed da dodamo jednom korisniku 100 poslova
+-otvorimo rutu: http://localhost:3000/jobs
