@@ -184,7 +184,7 @@ export async function getStatsAction(): Promise<{
         clerkId: userId,
       },
     });
-    console.log('Stats:', stats);
+    // console.log('Stats:', stats);
 
     const statsObject = stats.reduce((acc, curr) => {
       acc[curr.status] = curr._count.status;
@@ -223,7 +223,7 @@ export async function getChartsDataAction(): Promise<
         createdAt: 'asc',
       },
     });
-    console.log('Jobs:', jobs);
+    // console.log('Jobs:', jobs);
 
     let applicationsPerMonth = jobs.reduce((acc, job) => {
       const date = dayjs(job.createdAt).format('MMM YY');

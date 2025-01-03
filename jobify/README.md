@@ -2648,7 +2648,8 @@ export async function getChartsDataAction(): Promise<
 
 5. **Create the component UI**
 
-   - In the component's return statement, create the component UI using the `HydrationBoundary`, `StatsContainer`, and `ChartsContainer` components.
+   - In the component's return statement, create the component UI using the `HydrationBoundary`, `StatsContainer`
+     and `ChartsContainer` components.
    - Pass the result of calling `dehydrate` with `queryClient` as the `state` prop to `HydrationBoundary`.
 
 6. **Export the StatsPage component**
@@ -2837,15 +2838,13 @@ export default StatsCards;
 'use client';
 import { useQuery } from '@tanstack/react-query';
 import { getStatsAction } from '@/utils/actions';
-import StatsCardfrom './StatsCard';
+import StatsCard from './StatsCard';
 
 function StatsContainer() {
   const { data } = useQuery({
     queryKey: ['stats'],
     queryFn: () => getStatsAction(),
   });
-
-
 
   return (
     <div className='grid md:grid-cols-2 gap-4 lg:grid-cols-3'>
@@ -2854,7 +2853,8 @@ function StatsContainer() {
       <StatsCard title='jobs declined' value={data?.declined || 0} />
     </div>
   );
-}
+};
+
 export default StatsContainer;
 ```
 

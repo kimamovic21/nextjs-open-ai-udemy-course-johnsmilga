@@ -1593,3 +1593,32 @@ Section 03: Jobify
 -u komponentu stats/page.tsx importujemo funkciju getChartsDataAction iz actions.ts fajla
 -u funkciji StatsPage() pozivamo funkciju getChartsDataAction()
 -vrijednost funkcije getChartsDataAction() pohranjujemo u funkciju const charts
+
+148. Stats Container
+-otvorimo link: https://ui.shadcn.com/docs/components/card
+-u folderu components kreiramo komponente StatsContainer.tsx i ChartsContainer.tsx
+-u komponentu stats/page.tsx importujemo funkcije dehydrate, QueryClient i komponentu HydrationBoundary iz paketa Tanstack
+-importujemo komponente StatsContainer.tsx i ChartsContainer.tsx
+-u funkciji StatsPage() kreiramo varijablu const queryClient
+-dodajemo dvije metode await queryClient.prefetchQuery()
+-u jsx-u dodajemo komponentu HydrationBoundary kao roditelj element
+-komponenti HydrationBoundary dodajemo prop state 
+-u prop state proslijedujemo funkciju dehydrate(queryClient)
+-u komponentu HydrationBoundary dodajemo komponente StatsContainer i ChartsContainer
+-kreiramo komponentu StatsCard.tsx
+-u komponentu StatsCard.tsx importujemo komponente Card, CardDescription, CardHeader i CardTitle iz komponente ui/card.tsx
+-kreiramo tip StatsCardsProps
+-funkciji StatsCard() dodajemo parametre destruktuirane prop title i value sa tipovima
+-u jsx-u dodajemo komponentu Card kao roditelj element
+-u komponentu Card dodajemo komponente CardHeader
+-u komponentu CardHeader dodajemo komponente CardTitle i CardDescription
+-u komponentu StatsContainer.tsx importujemo komponentu StatsCard.tsx
+-importujemo funkciju useQuery iz paketa Tanstack
+-importujemo funkciju getStatsAction iz actions.ts fajla
+-u funkciji StatsContainer() pozivamo funkciju useQuery()
+-u funkciju useQuery() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo niz queryKey i funkciju queryFn
+-u funkciju queryFn proslijedujemo funkciju getStatsAction()
+-vrijednost funkcije useQuery() pohranjujemo u destruktuiranu varijablu const { data }
+-u jsx-u roditelj div elementu dodajemo Tailwind CSS Grid klase
+-u div element dodajemo tri komponente StatsCard sa prop title i value
