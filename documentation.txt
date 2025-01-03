@@ -1560,3 +1560,21 @@ Section 03: Jobify
 -u seed.js fajl kopiramo kod iz README.md fajla
 -u terminalu ukucamo komandu node prisma/seed da dodamo jednom korisniku 100 poslova
 -otvorimo rutu: http://localhost:3000/jobs
+
+146. Stats Action
+-u actions.ts kreiramo i eksportujemo asinhronu funkciju getStatsAction() sa tipom Promise<{ ...}>
+-u funkciji getStatsAction() kreiramo varijablu const userId
+-dodajemo metodu await new Promise()
+-dodajemo blokove koda try - catch
+-u blok koda try dodajemo metodu await.prisma.job.groupBy()
+-u funkciju groupBy() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekte where, by i _count
+-u blok koda catch dodajemo funkciju redirect('/jobs')
+-u bloku koda try kreiramo varijablu const statsObject
+-kreiramo varijablu const defaultStats
+-dodajemo izjavu return defaultStats
+-u komponentu stats/page.tsx importujemo funkciju getStatsAction
+-u funkciji StatsPage() dodajemo asinhronost
+-u funkciji StatsPage() pozivamo funkciju getStatsAction()
+-vrijednost funkcije await getStatsAction() pohranjujemo u varijablu const stats
+-u pretrazivacu otvorimo rutu: http://localhost:3000/stats

@@ -2453,7 +2453,8 @@ main()
 1. **Define the getStatsAction function**
 
    - Define an asynchronous function named `getStatsAction`.
-   - This function should return a Promise that resolves to an object with `pending`, `interview`, and `declined` properties, all of type number.
+   - This function should return a Promise that resolves to an object with `pending`, `interview`, and `declined` properties, 
+     all of type number.
 
 2. **Authenticate the user**
 
@@ -2543,7 +2544,8 @@ export async function getStatsAction(): Promise<{
 
 3. **Calculate the date six months ago**
 
-   - Use `dayjs` to get the current date, subtract 6 months from it, and convert it to a JavaScript Date object. Store this value in `sixMonthsAgo`.
+   - Use `dayjs` to get the current date, subtract 6 months from it, and convert it to a JavaScript Date object. 
+     Store this value in `sixMonthsAgo`.
 
 4. **Fetch the jobs from the database**
 
