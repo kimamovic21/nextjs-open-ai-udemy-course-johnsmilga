@@ -1535,3 +1535,19 @@ Section 03: Jobify
 -u komponentu HydrationBoundary dodajemo komponentu EditJobForm 
 -komponenti EditJobForm dodajemo prop jobId
 -u pretrazivacu otvorimo rutu: http://localhost:3000/jobs/[jobId]
+
+144. EditJobForm Component
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju updateJobAction()
+-funkciji updateJobAction() dodajemo dva parametra sa tipovima
+-funkciji updateJobAction() dodajemo tip Promise<JobType | null>
+-u funkciji updateJobAction() pozivamo funkciju authenticateAndRedirect()
+-vrijednost funkcije authenticateAndRedirect() pohranjujemo u varijablu const userId
+-dodajemo blokove koda try - catch
+-u blok koda try dodajemo metodu await prisma.job.update()
+-funkciji update() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekte where i data
+-dodajemo izjavu return job
+-vrijednost metode await prisma.job.update() pohranjujemo u varijable const job sa tipom JobType
+-u blok koda catch dodajemo izjavu return null
+-kopiramo kod iz README.md fajla u komponentu EditJobForm.tsx
+-otvorimo rutu: http://localhost:3000/jobs/[jobId] i izmjenimo podatke o poslu

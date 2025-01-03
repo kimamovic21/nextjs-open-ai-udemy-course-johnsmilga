@@ -2278,7 +2278,8 @@ export async function updateJobAction(
 
 6. **Create the component UI**
 
-   - In the component's return statement, create the component UI using the `Form`, `CustomFormField`, `CustomFormSelect`, and `Button` components.
+   - In the component's return statement, create the component UI using the `Form`, `CustomFormField`, `CustomFormSelect` 
+     and `Button` components.
 
 7. **Export the EditJobForm component**
    - After defining the `EditJobForm` component, export it so it can be used in other parts of your application.
@@ -2290,26 +2291,20 @@ export async function updateJobAction(
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-
 import {
   JobStatus,
   JobMode,
   createAndEditJobSchema,
   CreateAndEditJobType,
 } from '@/utils/types';
-
 import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
-
 import { CustomFormField, CustomFormSelect } from './FormComponents';
 import { useMutation, useQueryClient, useQuery } from '@tanstack/react-query';
-import {
-  createJobAction,
-  getSingleJobAction,
-  updateJobAction,
-} from '@/utils/actions';
+import { getSingleJobAction, updateJobAction } from '@/utils/actions';
 import { useToast } from '@/components/ui/use-toast';
 import { useRouter } from 'next/navigation';
+
 function EditJobForm({ jobId }: { jobId: string }) {
   const queryClient = useQueryClient();
   const { toast } = useToast();
@@ -2356,7 +2351,7 @@ function EditJobForm({ jobId }: { jobId: string }) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     mutate(values);
-  }
+  };
 
   return (
     <Form {...form}>
@@ -2399,7 +2394,8 @@ function EditJobForm({ jobId }: { jobId: string }) {
       </form>
     </Form>
   );
-}
+};
+
 export default EditJobForm;
 ```
 
