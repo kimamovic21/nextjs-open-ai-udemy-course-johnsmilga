@@ -3297,4 +3297,26 @@ function ButtonContainer({ currentPage, totalPages }: ButtonContainerProps) {
 export default ButtonContainer;
 ```
 
+
+## Production
+
+[Database](https://neon.tech/)
+Connection string example: `postgresql://user:password@host:port/dbname`
+
+.env file:
+DATABASE_URL=postgresql://user:password@host:port/dbname
+DIRECT_URL=postgresql://user:password@host:port/dbname
+
+```prisma
+  datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+    directUrl = env("DIRECT_URL")
+  }
+```
+
+```sh
+npx prisma db push
+```
+
 ## THE END

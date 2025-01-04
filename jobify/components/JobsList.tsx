@@ -31,8 +31,9 @@ function JobsList() {
   return (
     <>
       <div className='flex items-center justify-between mb-8'>
-        <h2 className='text-xl font-semibold capitalize'>
-          {count} jobs found
+        <h2 className='text-xl font-semibold'>
+          <span className='mr-2'>{count}</span>
+          <span>{count === 1 ? `job found` : `jobs found`}</span>
         </h2>
         {totalPages < 2 ? null : (
           <ComplexButtonContainer
