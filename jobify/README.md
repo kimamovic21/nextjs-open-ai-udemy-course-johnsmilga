@@ -2925,7 +2925,8 @@ export default loading;
 
 5. **Handle the empty data state**
 
-   - After the loading state check, add a conditional return statement that checks if `data` is null or `data.length` is less than 1.
+   - After the loading state check, add a conditional return statement that checks if `data` is null or `data.length` 
+     is less than 1.
    - If the condition is true, return null.
 
 6. **Render the chart**

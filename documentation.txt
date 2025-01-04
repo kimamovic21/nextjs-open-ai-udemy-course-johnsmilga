@@ -1630,3 +1630,18 @@ Section 03: Jobify
 -u folderu stats kreiramo komponentu loading.tsx
 -u komponentu stats/loading.tsx importujemo komponentu StatsLoadingCard.tsx
 -u komponentu jobs/loading.tsx importujemo komponentu Skeleton iz komponente ui/skeleton.tsx
+
+150. Charts Container
+-otvorimo web stranicu: https://recharts.org/en-US
+-u komponentu ChartsContainer.tsx dodajemo direktivu 'use client'
+-importujemo funkciju useQuery iz paketa Tanstack
+-importujemo komponente iz paketa Recharts
+-importujemo funkciju getChartsDataAction iz actions.ts fajla
+-u funkciji ChartsContainer() pozivamo funkciju useQuery()
+-vrijednost funkcije useQuery pohranjujemo u varijable const { data, isPending }
+-funkciji useQuery() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo niz queryKey i funkciju queryFn
+-dodajemo dva uslova if (isPending) i if (!data || data.length < 1)
+-u jsx-u kreiramo section element kao roditelj element
+-u section elementu kreiramo h2 element sa Tailwind CSS klasama
+-u section element dodajemo komponente iz paketa Recharts
