@@ -4,7 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import { useQuery } from '@tanstack/react-query';
 import { getAllJobsAction } from '@/utils/actions';
 import JobCard from './JobCard';
-import ButtonContainer from './ButtonContainer';
+import ComplexButtonContainer from './ComplexButtonContainer';
 
 function JobsList() {
   const searchParams = useSearchParams();
@@ -35,7 +35,7 @@ function JobsList() {
           {count} jobs found
         </h2>
         {totalPages < 2 ? null : (
-          <ButtonContainer 
+          <ComplexButtonContainer
             currentPage={page} 
             totalPages={totalPages}
           />

@@ -1680,3 +1680,7 @@ Section 03: Jobify
 -u prop variant dodajemo uslov ternarni operator currentPage === page ?
 -u dogadaj onClick proslijedujemo funkciju () => handlePageChange(page)
 -u komponenti Button dinamicki prikazujemo vrijednost varijable page
+
+152. Complex Button Component
+-u folderu components kreiramo komponentu ComplexButtonContainer.tsx
+-u komponentu JobsList.tsx importujemo komponentu ComplexButtonContainer.tsx

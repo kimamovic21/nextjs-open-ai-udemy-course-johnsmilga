@@ -3157,8 +3157,10 @@ export default ButtonContainer;
 
 ```tsx
 'use client';
+
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Button } from './ui/button';
 
 type ButtonContainerProps = {
   currentPage: number;
@@ -3170,13 +3172,10 @@ type ButtonProps = {
   activeClass: boolean;
 };
 
-import { Button } from './ui/button';
 function ButtonContainer({ currentPage, totalPages }: ButtonContainerProps) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
-
-  const pageButtons = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   const handlePageChange = (page: number) => {
     const defaultParams = {
@@ -3293,7 +3292,8 @@ function ButtonContainer({ currentPage, totalPages }: ButtonContainerProps) {
       </Button>
     </div>
   );
-}
+};
+
 export default ButtonContainer;
 ```
 
