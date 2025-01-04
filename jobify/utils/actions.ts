@@ -170,9 +170,8 @@ export async function getStatsAction(): Promise<{
   interview: number;
   declined: number;
 }> {
-  const userId = authenticateAndRedirect();
-
   await new Promise((resolve) => setTimeout(resolve, 1000));
+  const userId = authenticateAndRedirect();
 
   try {
     const stats = await prisma.job.groupBy({

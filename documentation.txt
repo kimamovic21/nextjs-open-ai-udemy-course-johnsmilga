@@ -1622,3 +1622,11 @@ Section 03: Jobify
 -vrijednost funkcije useQuery() pohranjujemo u destruktuiranu varijablu const { data }
 -u jsx-u roditelj div elementu dodajemo Tailwind CSS Grid klase
 -u div element dodajemo tri komponente StatsCard sa prop title i value
+
+149. Loading Skeleton
+-otvorimo link: https://ui.shadcn.com/docs/components/skeleton
+-u komponentu StatsCard.tsx importujemo komponentu Skeleton iz komponente ui/skeleton.tsx
+-kreiramo i eksportujemo funkciju StatsLoadingCard()
+-u folderu stats kreiramo komponentu loading.tsx
+-u komponentu stats/loading.tsx importujemo komponentu StatsLoadingCard.tsx
+-u komponentu jobs/loading.tsx importujemo komponentu Skeleton iz komponente ui/skeleton.tsx

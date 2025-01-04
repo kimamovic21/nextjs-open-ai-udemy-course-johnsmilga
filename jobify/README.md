@@ -2864,6 +2864,7 @@ stats/loading.tsx
 
 ```tsx
 import { StatsLoadingCard } from '@/components/StatsCard';
+
 function loading() {
   return (
     <div className='grid md:grid-cols-2 gap-4 lg:grid-cols-3'>
@@ -2872,7 +2873,8 @@ function loading() {
       <StatsLoadingCard />
     </div>
   );
-}
+};
+
 export default loading;
 ```
 
@@ -2889,7 +2891,8 @@ function loading() {
       <Skeleton className='h-10 ' />
     </div>
   );
-}
+};
+
 export default loading;
 ```
 
