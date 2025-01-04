@@ -1684,3 +1684,8 @@ Section 03: Jobify
 152. Complex Button Component
 -u folderu components kreiramo komponentu ComplexButtonContainer.tsx
 -u komponentu JobsList.tsx importujemo komponentu ComplexButtonContainer.tsx
+
+
+Section 04: Bonus
+
+153. Bonus
