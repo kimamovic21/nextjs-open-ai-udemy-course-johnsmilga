@@ -1645,3 +1645,38 @@ Section 03: Jobify
 -u jsx-u kreiramo section element kao roditelj element
 -u section elementu kreiramo h2 element sa Tailwind CSS klasama
 -u section element dodajemo komponente iz paketa Recharts
+
+151. Button Component
+-u actions.ts fajlu, u funkciji getAllJobsAction() kreiramo varijablu const skip
+-u funkciju findMany() dodajemo opcije skip i limit
+-kreiramo varijablu const count
+-u funkciju count() dodajemo opciju where
+-kreiramo varijablu const totalPages
+-dodajemo izjavu objekt return { jobs, count, page, totalPages }
+-u folderu components kreiramo komponentu ButtonContainer
+-u komponentu JobsList.tsx kreiramo varijable const count, const page i const totalPages
+-u jsx-u, u praznom fragmentu kreiramo div element sa Tailwind CSS flex klasama
+-u div elementu kreiramo h2 element sa Tailwind CSS klasama
+-u h2 elementu dinamicki prikazujemo vrijednost varijable count
+-importujemo komponentu ButtonContainer.tsx
+-ispod h2 elementa dodajemo uslov ternarni operator totalPages < 2 za prikazivanje komponente ButtonContainer
+-u komponentu ButtonContainer dodajemo direktivu 'use client'
+-importujemo funkcije usePathname, useRouter i useSearchParams iz paketa Next Navigation
+-importujemo komponentu Button iz komponente ui/button.tsx
+-kreiramo tip ButtonContainerProps
+-funkciji ButtonContainer() dodajemo parametre destruktuirane prop currentPage i totalPages
+-parametrima dodajemo tip ButtonContainerProps
+-kreiramo tri varijable const searchParams, const router i const pathname
+-dodajemo metodu Array.fom()
+-vrijednost metode Array.from() pohranjujemo u varijablu const pageButtons
+-kreiramo funkciju handlePageChange() sa parametrom page
+-parametru page dodajemo tip number
+-u funkciji handlePageChange() kreiramo varijablu objekt const defaultParams
+-u objekt defaultParams dodajemo vrijednosti search, jobStatus i page
+-kreiramo varijablu let params
+-dodajemo metodu router.push()
+-u jsx-u, u roditelj div elementu dodajemo metodu pageButtons?.map()
+-u funkciju map() dodajemo komponentu Button sa prop key, size, variant i onClick
+-u prop variant dodajemo uslov ternarni operator currentPage === page ?
+-u dogadaj onClick proslijedujemo funkciju () => handlePageChange(page)
+-u komponenti Button dinamicki prikazujemo vrijednost varijable page

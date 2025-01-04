@@ -3055,16 +3055,23 @@ export async function getAllJobsAction({
 
 ```tsx
 'use client';
+
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { Button } from './ui/button';
 
 type ButtonContainerProps = {
   currentPage: number;
   totalPages: number;
 };
-import { Button } from './ui/button';
+
 function ButtonContainer({ currentPage, totalPages }: ButtonContainerProps) {
-  return <h2 className='text-4xl'>button container</h2>;
-}
+  return (
+    <h2 className='text-4xl'>
+      button container
+    </h2>
+  );
+};
+
 export default ButtonContainer;
 ```
 
@@ -3097,13 +3104,15 @@ const jobs = data?.jobs || [];
 
 ```tsx
 'use client';
+
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { Button } from './ui/button';
 
 type ButtonContainerProps = {
   currentPage: number;
   totalPages: number;
 };
-import { Button } from './ui/button';
+
 function ButtonContainer({ currentPage, totalPages }: ButtonContainerProps) {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -3122,9 +3131,10 @@ function ButtonContainer({ currentPage, totalPages }: ButtonContainerProps) {
 
     router.push(`${pathname}?${params.toString()}`);
   };
+
   return (
     <div className='flex  gap-x-2'>
-      {pageButtons.map((page) => {
+      {pageButtons?.map((page) => {
         return (
           <Button
             key={page}
@@ -3138,7 +3148,8 @@ function ButtonContainer({ currentPage, totalPages }: ButtonContainerProps) {
       })}
     </div>
   );
-}
+};
+
 export default ButtonContainer;
 ```
 
